@@ -1,0 +1,26 @@
+[project memo]
+
+REDCap Tablet Based Data Collection:   Stanley aka "TianLei Gangsta" Xu
+
+1)  Nurse/admin picks questionnaires to give to patient
+2)  Patient handed a tablet PC
+3) Patient answers questions and hits submit
+4)  A report is generated on a printer
+5)  Wash, Rinse, Repeat
+   -->  Only real challenge is making sure the tablet interface is simple enough... REDCap does this though.. 
+   and also matching up the  patient ID properly
+  
+What's required:
+
+REDCap Server
+A Tablet
+Hope
+Prayer
+
+
+
+
+------------------------------------------------
+[util sources]
+  php form designer:
+  http://www.phpform.org/
