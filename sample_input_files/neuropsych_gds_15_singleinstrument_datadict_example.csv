@@ -1,6 +1,4 @@
-neuro_gds15_q1,neuropsych_gds_15,"Geriatric Depression Scale (GDS)-15    Administration:     ""In the next part of this interview, I will ask you questions about your feelings. Some of the questions I will ask you may not apply and some may make you feel uncomfortable. For each question please answer ""yes"" or ""no"" depending on how you have been feeling in the past week, including today""    ",yesno,"Are you basically satisfied with your life?
-neuro_gds15_q2,neuropsych_gds_15,,yesno,"Have you dropped many of your activites and interests?
-neuro_gds15_q3,neuropsych_gds_15,,yesno,"Do you feel that your life is empty?
+"Variable / Field Name","Form Name","Section Header","Field Type","Field Label","Choices, Calculations, OR Slider Labels","Field Note","Text Validation Type OR Show Slider Number","Text Validation Min","Text Validation Max",Identifier?,"Branching Logic (Show field only if...)","Required Field?","Custom Alignment","Question Number (surveys only)"
 neuro_gds15_q4,neuropsych_gds_15,,yesno,"Do you often get bored?",,,,,,,,,RH,
 neuro_gds15_q5,neuropsych_gds_15,,yesno,"Are you in good spirits most of the time?",,,,,,,,,RH,
 neuro_gds15_q6,neuropsych_gds_15,,yesno,"Are you afraid something bad is going to happen to you?",,,,,,,,,RH,
