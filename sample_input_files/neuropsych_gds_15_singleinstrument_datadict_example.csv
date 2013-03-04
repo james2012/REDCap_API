@@ -1,0 +1,15 @@
+neuro_gds15_q1,neuropsych_gds_15,"Geriatric Depression Scale (GDS)-15    Administration:     ""In the next part of this interview, I will ask you questions about your feelings. Some of the questions I will ask you may not apply and some may make you feel uncomfortable. For each question please answer ""yes"" or ""no"" depending on how you have been feeling in the past week, including today""    ",yesno,"Are you basically satisfied with your life?
+neuro_gds15_q2,neuropsych_gds_15,,yesno,"Have you dropped many of your activites and interests?
+neuro_gds15_q3,neuropsych_gds_15,,yesno,"Do you feel that your life is empty?
+neuro_gds15_q4,neuropsych_gds_15,,yesno,"Do you often get bored?",,,,,,,,,RH,
+neuro_gds15_q5,neuropsych_gds_15,,yesno,"Are you in good spirits most of the time?",,,,,,,,,RH,
+neuro_gds15_q6,neuropsych_gds_15,,yesno,"Are you afraid something bad is going to happen to you?",,,,,,,,,RH,
+neuro_gds15_q7,neuropsych_gds_15,,yesno,"Do you feel happy most of the time?",,,,,,,,,RH,
+neuro_gds15_q8,neuropsych_gds_15,,yesno,"Do you often feel helpless?",,,,,,,,,RH,
+neuro_gds15_q9,neuropsych_gds_15,,yesno,"Do you prefer to stay at home rather than go out and do new things?",,,,,,,,,RH,
+neuro_gds15_q10,neuropsych_gds_15,,yesno,"Do you feel you have more problems with your memory than most people?",,,,,,,,,RH,
+neuro_gds15_q11,neuropsych_gds_15,,yesno,"Do you think it's wonderful to be alive now?",,,,,,,,,RH,
+neuro_gds15_q12,neuropsych_gds_15,,yesno,"Do you feel pretty worthless the way you are now?",,,,,,,,,RH,
+neuro_gds15_q13,neuropsych_gds_15,,yesno,"Do you feel full of energy?",,,,,,,,,RH,
+neuro_gds15_q14,neuropsych_gds_15,,yesno,"Do you feel your situation is hopeless?",,,,,,,,,RH,
+neuro_gds15_q15,neuropsych_gds_15,,yesno,"Do you think most people are better off than you are?",,,,,,,,,RH,
