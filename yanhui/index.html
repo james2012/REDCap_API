@@ -51,16 +51,24 @@ The parameter passed to the constructor is the object to attach the grid to (sho
 <div id='yanhui_gridbox'  style="width:800px;height:400px"></div>
 
 <script type="text/javascript">
+
+	yanhui_working_csv_file = '../sample_input_files/neuropsych_gds_15_singleinstrument_datadict_example.csv '
+
+
 	mygrid = new dhtmlXGridObject('yanhui_gridbox');
 	mygrid.setImagePath("../dhtmlx_include_dir/imgs/");//path to images required by grid
 	mygrid.setHeader("Column A is for apple, Column B is Boy,Column C is for Cow");//set column names
 	mygrid.setInitWidths("100,250,100");//set column width in px
 	mygrid.setColAlign("right,left,left");//set column values align
 	mygrid.setColTypes("ro,ed,ro");//set column types
-	mygrid.setColSorting("int,str,str");//set sorting
+	mygrid.setColSorting("str,str,str");//set sorting
 	mygrid.init();//initialize grid
 	mygrid.setSkin("dhx_skyblue");//set grid skin
-//	mygrid.loadXML("../common/grid.xml");//load data
+//	mygrid.loadXML("../common/grid.xml");//load data  WE ARE NOT LOADING XML...
+	mygrid.load(yanhui_working_csv_file,"csv");
+	
+	alert(yanhui_working_csv_file);
+
 </script>
 
 
