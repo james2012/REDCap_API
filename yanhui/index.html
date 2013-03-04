@@ -1,0 +1,67 @@
+<head>
+<title>Yanhui Sample Data Loader and Parser</title>
+
+
+<!--  The following libraries are required for dhtmlx code to function properly 	 -->
+
+<script src="../dhtmlx_include_dir/dhtmlx.js" type="text/javascript" charset="utf-8"></script>
+<link rel="stylesheet" href="../dhtmlx_include_dir/dhtmlx.css" type="text/css" charset="utf-8">
+</head>
+<body>
+
+
+
+</head>
+<body>
+
+<h1>THIS IS MY FIRST DHTMLX WEB PAGE!! </h1>
+<h2 style="color:blue">Programming is fun!!<br>
+Ni Hao</h2>
+
+
+<p>We are now creating out first dhtmlx grid object...
+
+This requires a couple of things... first we need to create a div/box/container to dump the grid in<br>
+
+So I am creating a div called gridbox....
+
+
+The next step is to create a new dhtmlXGridObject and define main parameters needed for grid to look and behave as you need (the sample below doesn&#039;t show all possibilities. it just demonstrates commonly used methods):
+
+</p>
+<pre class="code javascript">        mygrid <span class="sy0">=</span> <span class="kw2">new</span> dhtmlXGridObject<span class="br0">&#40;</span><span class="st0">'gridbox'</span><span class="br0">&#41;</span>;
+	mygrid.<span class="me1">setImagePath</span><span class="br0">&#40;</span><span class="st0">&quot;./codebase/imgs/&quot;</span><span class="br0">&#41;</span>;<span class="co1">//path to images required by grid</span>
+	mygrid.<span class="me1">setHeader</span><span class="br0">&#40;</span><span class="st0">&quot;Column A, Column B&quot;</span><span class="br0">&#41;</span>;<span class="co1">//set column names</span>
+	mygrid.<span class="me1">setInitWidths</span><span class="br0">&#40;</span><span class="st0">&quot;100,250&quot;</span><span class="br0">&#41;</span>;<span class="co1">//set column width in px</span>
+	mygrid.<span class="me1">setColAlign</span><span class="br0">&#40;</span><span class="st0">&quot;right,left&quot;</span><span class="br0">&#41;</span>;<span class="co1">//set column values align</span>
+	mygrid.<span class="me1">setColTypes</span><span class="br0">&#40;</span><span class="st0">&quot;ro,ed&quot;</span><span class="br0">&#41;</span>;<span class="co1">//set column types</span>
+	mygrid.<span class="me1">setColSorting</span><span class="br0">&#40;</span><span class="st0">&quot;int,str&quot;</span><span class="br0">&#41;</span>;<span class="co1">//set sorting</span>
+	mygrid.<span class="me1">init</span><span class="br0">&#40;</span><span class="br0">&#41;</span>;<span class="co1">//initialize grid</span>
+	mygrid.<span class="me1">setSkin</span><span class="br0">&#40;</span><span class="st0">&quot;dhx_skyblue&quot;</span><span class="br0">&#41;</span>;<span class="co1">//set grid skin</span>
+	mygrid.<span class="me1">loadXML</span><span class="br0">&#40;</span><span class="st0">&quot;../common/grid.xml&quot;</span><span class="br0">&#41;</span>;<span class="co1">//load data</span></pre>
+<p>
+
+The parameter passed to the constructor is the object to attach the grid to (should be loaded before the constructor is called). If none is used, then the user can apply attachToObject method to attach grid to some parent (object in <acronym title="Document Object Model">DOM</acronym>) in the following way:
+
+</p>
+
+</p>
+
+
+<div id='yanhui_gridbox'  style="width:800px;height:400px"></div>
+
+<script type="text/javascript">
+	mygrid = new dhtmlXGridObject('yanhui_gridbox');
+	mygrid.setImagePath("../dhtmlx_include_dir/imgs/");//path to images required by grid
+	mygrid.setHeader("Column A is for apple, Column B is Boy,Column C is for Cow");//set column names
+	mygrid.setInitWidths("100,250,100");//set column width in px
+	mygrid.setColAlign("right,left,left");//set column values align
+	mygrid.setColTypes("ro,ed,ro");//set column types
+	mygrid.setColSorting("int,str,str");//set sorting
+	mygrid.init();//initialize grid
+	mygrid.setSkin("dhx_skyblue");//set grid skin
+//	mygrid.loadXML("../common/grid.xml");//load data
+</script>
+
+
+</body>
