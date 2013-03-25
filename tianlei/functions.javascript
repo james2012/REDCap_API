@@ -12,5 +12,6 @@ function isNull(input){
     input=='na' ||
     input=='Na' ||
     input=='NaN' ||
+    input=='none' ||
     input=='999'
 }
