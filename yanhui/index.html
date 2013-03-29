@@ -51,26 +51,40 @@ The parameter passed to the constructor is the object to attach the grid to (sho
 
 <div id='yanhui_gridbox'  style="width:800px;height:400px"></div>
 
+
+<br>
+<h2>Validated test data target box</h2>
+<div id='validation_gridbox'  style="width:800px;height:400px"></div>
+
 <script type="text/javascript">
 
-	yanhui_working_csv_file = '../sample_input_files/neuropsych_gds_15_singleinstrument_datadict_example.csv '
+	yanhui_working_csv_file = '../sample_input_files/neuropsych_gds_15_singleinstrument_datadict_example.csv ';
 
 
 	mygrid = new dhtmlXGridObject('yanhui_gridbox');
 	mygrid.setImagePath("../dhtmlx_include_dir/imgs/");//path to images required by grid
-//	mygrid.setHeader("Column A is for apple, Column B is Boy,Column C is for Cow,D,E,F,G");//set column names
-//	mygrid.setInitWidths("100,250,100");//set column width in px
-//	mygrid.setColAlign("right,left,left");//set column values align
-//	mygrid.setColTypes("ro,ed,ro");//set column types
-//	mygrid.setColSorting("str,str,str");//set sorting
 	mygrid.setSkin("dhx_skyblue");//set grid skin
-//	mygrid.loadXML("../common/grid.xml");//load data  WE ARE NOT LOADING XML...
 	mygrid.setCSVDelimiter(",");
 	mygrid.enableCSVHeader(true);
 	mygrid.load(yanhui_working_csv_file,"csv");
 	mygrid.init();//initialize grid
+
 	
 //	alert(yanhui_working_csv_file);
+
+
+
+	targetgrid = new dhtmlXGridObject('validation_gridbox');
+	targetgrid.setImagePath("../dhtmlx_include_dir/imgs/");//path to images required by grid
+	targetgrid.setHeader("Original Data, After Data Transform,Validated");//set column names
+	targetgrid.setInitWidths("100,250,100");//set column width in px
+	targetgrid.setColAlign("right,right,right");//set column values align
+	targetgrid.setColTypes("ro,ed,ro");//set column types
+	targetgrid.setColSorting("str,str,str");//set sorting
+	targetgrid.setSkin("dhx_skyblue");//set grid skin
+	targetgrid.init();//initialize grid
+
+
 
 </script>
 
@@ -81,9 +95,7 @@ we would just iterate using the numRows and numCols properties...
 
 yanhui = mygrid.cellById(1,1)
 
-
 so we would do something like...
-
 
 mygrid.getRowsNum() returns number of rows
 
@@ -94,17 +106,17 @@ mygrid.getColumnsNum() returns columsn..
 var total_cols = mygrid.getColumnsNum();
 var total_rows = mygrid.getRowsNum();
 
-alert(total_cols);
+//alert(total_cols);
 myuber_string = "";
 
 for( var i=1; i< total_cols; i++)
 	{
 	current_cell_value = mygrid.cellById(1,i).getValue();
 	myuber_string = myuber_string + current_cell_value;	
-	alert(current_cell_value);
+//	alert(current_cell_value);
 	}
 
-alert(myuber_string);
+//alert(myuber_string);
 
 
 
