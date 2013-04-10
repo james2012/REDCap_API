@@ -97,19 +97,20 @@ if(isset($_FILES['uploaded_data_files']))
 	<script src="codebase/csv2array.js"></script>
 
 <script type="text/javascript">
-    function validate() {
-        var length = mygd.getColumnsNum()
-            for (var i = 0; i < mygd.getColumnsNum(); i++) { 
-                    var col_id = mygd.getColumnLabel(i); 
-                     var col_index = col_dic.indexOf(col_id)  if (col_index == -1) {  
-                          mygd.forEachRow(function (id) {     
-                               mygd.setCellTextStyle(id, i, "background-color: yellow");
-                }); 
-                 }
+      function validate() {
+       	var length = mygd.getColumnsNum()
+            for (var i = 0; i < mygd.getColumnsNum(); i++) { 
+                    var col_id = mygd.getColumnLabel(i); 
+                    var col_index = col_dic.indexOf(col_id);
+			if (col_index == -1) {  
+                         	mygd.forEachRow(function (id) {     
+                               	mygd.setCellTextStyle(id, i, "background-color: yellow");
+                		}); 
+                 	}	
             }
-    }
+      }
 
-    function get() {
+      function get() {
 	  //alert ("Start Function");
       // retrieve data
       var data = document.getElementById("textbox").value;
@@ -434,7 +435,6 @@ if(isset($_FILES['uploaded_data_files']))
 <select id="flist"><option value="">Select from uploaded files</option></select>
 <input type="button" value="Get Array from CSV" onclick="get();">
 </div>
-<input type="button" value="Validate" onclick="validate();">
 <textarea rows="40" cols="400" id="textbox" style="display: none"></textarea>
 <textarea rows="40" cols="400" id="xmlbox" style="display: none"></textarea>
 <textarea rows="40" cols="400" id="databox" style="display: none"></textarea>
