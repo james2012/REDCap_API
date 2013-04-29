@@ -122,46 +122,38 @@ if(isset($_FILES['uploaded_data_files']))
 	var data_dictionary_as_str;
 	
 	
-	var redcap_datadict_grid_obj = new Object();
+	var redcap_datadict = new Object();
 	
 	/* This object will contain all of the data and parameters associated with the grid that holds the redcap_datadict object...
 	To make the grid look nice certain properties need to be configured such as column sorting, alignment, etc... these will be computed
-	and then set via the object */ 
+	and then set via the object 
+	properties such as column alignment, column names, sorting, etc are configured in the helper functions
+	dhtmlx configures the grid using a comma separates list such as  center,center,center,center
+	*/ 
 	
-	
-	/* GridData will be an object I create and populate... the various properties such as column alignment and sorting will be set within the object */
-	
-	
+
 	  
 
 	<?php include 'validate.php'; ?>
       function get() {
 
       // retrieve data
-      redcap_datadict_grid_obj.raw_csv_data = document.getElementById("textbox").value;
+      redcap_datadict.raw_csv_data = document.getElementById("textbox").value;
 
       // convert data to array
-      array = convert_csvstring_to_object( redcap_datadict_grid_obj  );
+      array = convert_csvstring_to_object( redcap_datadict  );
 
    
-   
-      // convert the array back to a string
-     
-		//alert ("Header Loaded");
-	//	  ject.InitWidths_string = strInitWidths;
-	//	 datagrid_config_object.ColAlign_string = strColAlign;
-	//	 datagrid_config_object.ColSorting_string = strColSorting;
-		
-
+   		
 		datadict_grid = new dhtmlXGridObject('gridbox');
 		datadict_grid.selMultiRows = true;
 		datadict_grid.imgURL = "codebase/imgs/icons_greenfolders/";
 		//alert (strHeader + " : " + strInitWidths + " : " + strColAlign + " : " + strColTypes + " : " + strColSorting);
 		datadict_grid.setHeader(grid_Header);
-		datadict_grid.setInitWidths(strInitWidths);
-		datadict_grid.setColAlign(strColAlign);
-		datadict_grid.setColTypes(strColTypes);
-		datadict_grid.setColSorting(strColSorting);
+		datadict_grid.setInitWidths(redcap_datadict.InitWidths );
+		datadict_grid.setColAlign(redcap_datadict.ColAlign);
+		datadict_grid.setColTypes(redcap_datadict.ColTypes);
+		datadict_grid.setColSorting(redcap_datadict.ColSorting);
 		datadict_grid.init();
 		datadict_grid.setSkin("dhx_skyblue");
 		var parent_id = "";
