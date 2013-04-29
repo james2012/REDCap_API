@@ -18,6 +18,12 @@ if(isset($_FILES['uploaded_dict_files']))
 				$title = time().rand(0,999);
 				$filename = $title.".".$ext;
 				
+				
+				$today = date("m.d.y.G.i.s");
+				$filename = $today.".".$ext;
+
+				#$orig_filename = "meh"
+				
 				//Check if the file was moved
 				if(move_uploaded_file($_FILES['uploaded_dict_files']['tmp_name'][$key], 'uploads/dictionary/'. $filename))
 				{
@@ -95,92 +101,81 @@ if(isset($_FILES['uploaded_data_files']))
 	<link rel="STYLESHEET" type="text/css" href="codebase/dhtmlx.css">
 	<script src="codebase/dhtmlx.js"></script>
 	<script src="codebase/csv2array.js"></script>
+	<script src="validate.js"></script>
+	<script src="redletr_helper_functions.js"></script>
+	
+	
+	<style>
+	.upload_box
+		{
+		margin: 2px;
+		border: 1px solid blue;
+		
+		}
+	</style>
 
-<script src='validate.js'></script>
 <script type="text/javascript">
+
+	//define global variables here
+	var atlas_grid ;
+	var csv_data_grid;
+	var data_dictionary_as_str;
+	
+	
+	var redcap_datadict_grid_obj = new Object();
+	
+	/* This object will contain all of the data and parameters associated with the grid that holds the redcap_datadict object...
+	To make the grid look nice certain properties need to be configured such as column sorting, alignment, etc... these will be computed
+	and then set via the object */ 
+	
+	
+	/* GridData will be an object I create and populate... the various properties such as column alignment and sorting will be set within the object */
+	
+	
+	  
+
 	<?php include 'validate.php'; ?>
       function get() {
-	  //alert ("Start Function");
+
       // retrieve data
-      var data = document.getElementById("textbox").value;
-      
+      redcap_datadict_grid_obj.raw_csv_data = document.getElementById("textbox").value;
+
       // convert data to array
-      try {
-        var array = csv2array(data);
-      }
-      catch (exception) {
-        alert("Error: " + exception);
-        return;
-      }
+      array = convert_csvstring_to_object( redcap_datadict_grid_obj  );
 
+   
+   
       // convert the array back to a string
-      var strHeader = "";
-	  var strInitWidths = "";
-	  var strColAlign = "";
-	  var strColTypes = "";
-	  var strColSorting = "";
-		for (col = 0; col < array[0].length; col++) {
-		  if (col == (array[0].length - 1)) {
-			strHeader += array[0][col].replace(/,/g,';');
-			strInitWidths += "200";
-			strColAlign += "left";
-			strColTypes += "txt";	
-			strColSorting += "str";			
-		  }
-		  else {
-			if (col == 0) {
-				strColTypes += "tree,";			
-			}
-			else {
-				strColTypes += "txt,";			
-			}
-			if (col == 1) {
-				strHeader += array[0][0].replace(/,/g,';') + ",";
-			}
-			if (col == 0) {
-				strHeader += array[0][1].replace(/,/g,';') + ",";
-			}
-			if (col > 1) {
-				strHeader += array[0][col].replace(/,/g,';') + ",";
-			}
-
-			strInitWidths += "200,";
-			strColAlign += "left,";
-			strColSorting += "str,";
-		  }
-		}
+     
 		//alert ("Header Loaded");
-	  
-      
-		mygrid = new dhtmlXGridObject('gridbox');
-		mygrid.selMultiRows = true;
-		mygrid.imgURL = "codebase/imgs/icons_greenfolders/";
+	//	  ject.InitWidths_string = strInitWidths;
+	//	 datagrid_config_object.ColAlign_string = strColAlign;
+	//	 datagrid_config_object.ColSorting_string = strColSorting;
+		
+
+		datadict_grid = new dhtmlXGridObject('gridbox');
+		datadict_grid.selMultiRows = true;
+		datadict_grid.imgURL = "codebase/imgs/icons_greenfolders/";
 		//alert (strHeader + " : " + strInitWidths + " : " + strColAlign + " : " + strColTypes + " : " + strColSorting);
-		mygrid.setHeader(strHeader);
-		mygrid.setInitWidths(strInitWidths);
-		mygrid.setColAlign(strColAlign);
-		mygrid.setColTypes(strColTypes);
-		mygrid.setColSorting(strColSorting);
-		/*mygrid.setHeader("Tree,Plain Text,Long Text,Color,Checkbox");
-		mygrid.setInitWidths("150,100,100,100,100");
-		mygrid.setColAlign("left,left,left,left,center");
-		mygrid.setColTypes("tree,ed,txt,ch,ch");
-		mygrid.setColSorting("str,str,str,na,str");*/		
-		mygrid.init();
-		mygrid.setSkin("dhx_skyblue");
-		//mygrid.loadXML("codebase/test_list_1.xml");		
-		//mygrid.enableAutoHeigth(true);
-		//alert ("Header Printed");		
-		/*mygrid.setSkin("dhx_skyblue");
-		//alert ("Header Done");*/
+		datadict_grid.setHeader(grid_Header);
+		datadict_grid.setInitWidths(strInitWidths);
+		datadict_grid.setColAlign(strColAlign);
+		datadict_grid.setColTypes(strColTypes);
+		datadict_grid.setColSorting(strColSorting);
+		datadict_grid.init();
+		datadict_grid.setSkin("dhx_skyblue");
 		var parent_id = "";
 		var counter = 0;
 		var txtRows = "";
+ 
+ 
+ 
+ 
         for (row = 1; row < array.length; row++) {
 			if (array[row][1] != parent_id) {
 				//alert (array[row][1]);			
 				try {
-					mygrid.addRow(array[row][1],array[row][1],0,null,"folder.gif");
+					datadict_grid.addRow(array[row][1],array[row][1],0,null,"folder.gif");
 				}
 				catch (exception) {
 					alert("Error: " + exception);
@@ -199,7 +194,7 @@ if(isset($_FILES['uploaded_data_files']))
 			  }
 			}
 			try {
-				mygrid.addRow((array[row][1] + counter),txtRows,0,parent_id);
+				datadict_grid.addRow((array[row][1] + counter),txtRows,0,parent_id);
 			}
 			catch (exception) {
 				alert("Error: " + exception);
@@ -207,12 +202,12 @@ if(isset($_FILES['uploaded_data_files']))
 			//alert ((array[row][1] + counter) + " : " + txtRows + " : " + parent_id);
 		}
 		
-	    //mygrid.parse(strXML);
-		/*mygrid.init();*/				
+	    //datadict_grid.parse(strXML);
+		/*datadict_grid.init();*/				
 		
       // show the data in an alert
       // alert(arrayStr)
-
+	/*
       var gd = document.getElementById("tbox").value;
       
       // convert data to array
@@ -261,29 +256,40 @@ if(isset($_FILES['uploaded_data_files']))
 		  }
 		}
 		//alert ("Header Loaded");
-	  
+	      for (row = 1; row < arr.length; row++) {
+			for (col = 0; col < arr[row].length; col++) {
+			  if (col == (arr[row].length - 1)) {
+				txtRow += arr[row][col];
+			  }
+			  else {
+				txtRow += arr[row][col] + ",";			  
+			  }
+			}
+			try {
+				atlas_grid.addRow((arr[row][0] + counter),txtRow,0,null);
+			}
+			catch (exception) {
+				alert("Error: " + exception);
+			}						
+			//alert ((array[row][1] + counter) + " : " + txtRows + " : " + parent_id);
+		}
+
+
+
+
       
-		mygd = new dhtmlXGridObject('gbox');
-		mygd.selMultiRows = true;
-		mygd.imgURL = "codebase/imgs/icons_greenfolders/";
+		atlas_grid = new dhtmlXGridObject('gbox');
+		atlas_grid.selMultiRows = true;
+		atlas_grid.imgURL = "codebase/imgs/icons_greenfolders/";
 		//alert (strHeader + " : " + strInitWidths + " : " + strColAlign + " : " + strColTypes + " : " + strColSorting);
-		mygd.setHeader(strHead);
-		mygd.setInitWidths(strInitWidth);
-		mygd.setColAlign(strColAl);
-		mygd.setColTypes(strColType);
-		mygd.setColSorting(strColSort);
-		/*mygrid.setHeader("Tree,Plain Text,Long Text,Color,Checkbox");
-		mygrid.setInitWidths("150,100,100,100,100");
-		mygrid.setColAlign("left,left,left,left,center");
-		mygrid.setColTypes("tree,ed,txt,ch,ch");
-		mygrid.setColSorting("str,str,str,na,str");*/		
-		mygd.init();
-		mygd.setSkin("dhx_skyblue");
-		//mygrid.loadXML("codebase/test_list_1.xml");		
-		//mygrid.enableAutoHeigth(true);
-		//alert ("Header Printed");		
-		/*mygrid.setSkin("dhx_skyblue");
-		//alert ("Header Done");*/
+		atlas_grid.setHeader(strHead);
+		atlas_grid.setInitWidths(strInitWidth);
+		atlas_grid.setColAlign(strColAl);
+		atlas_grid.setColTypes(strColType);
+		atlas_grid.setColSorting(strColSort);
+		
+		atlas_grid.init();
+		atlas_grid.setSkin("dhx_skyblue");
 		var txtRow = "";
         for (row = 1; row < arr.length; row++) {
 			for (col = 0; col < arr[row].length; col++) {
@@ -295,14 +301,14 @@ if(isset($_FILES['uploaded_data_files']))
 			  }
 			}
 			try {
-				mygd.addRow((arr[row][0] + counter),txtRow,0,null);
+				atlas_grid.addRow((arr[row][0] + counter),txtRow,0,null);
 			}
 			catch (exception) {
 				alert("Error: " + exception);
 			}						
 			//alert ((array[row][1] + counter) + " : " + txtRows + " : " + parent_id);
 		}
-
+		*/
 
 	  }
   </script>
@@ -334,48 +340,50 @@ if(isset($_FILES['uploaded_data_files']))
 			
 		});
 		
-		$('.add_field').click(function(){
+		
+		
 	
-			var input = $('#input_clone');
-			var clone = input.clone(true);
-			clone.removeAttr ('id');
-			clone.val('');
-			clone.appendTo('.input_holder'); 
-			
-		});
-
-		$('.remove_field').click(function(){
-		
-			if($('.input_holder input:last-child').attr('id') != 'input_clone'){
-				$('.input_holder input:last-child').remove();
-			}
-		
-		});
-
-		$('.field_add').click(function(){
-	
-			var input = $('#clone_input');
-			var clone = input.clone(true);
-			clone.removeAttr ('id');
-			clone.val('');
-			clone.appendTo('.holder_input'); 
-			
-		});
-
-		$('.field_remove').click(function(){
-		
-			if($('.holder_input input:last-child').attr('id') != 'clone_input'){
-				$('.holder_input input:last-child').remove();
-			}
-		
-		});
-		
 	});
 	
 	</script>
 </head>
 
 <body>
+<div id="header_box" style="border: 1px solid black">
+<h1>WELCOME TO RED Lettr!! LOGO and help buttons go here</h1>
+
+<div id="button_ctrls">
+	<button id="bobs_button" onClick="bobs_function()"  name="BOB ROCKS">BOB</button>
+
+
+	<button id="shin_button" onClick="shins_function()" name="SHIN ROCKS">SHIN</button>
+	<button id="validate_button" onClick="validate_function()" name="Validate">VALIDATE! RUH ROH</button>
+
+
+  </div>
+
+</div>
+
+
+
+<script >
+function bobs_function()
+	{
+	alert("BOB IS COOL");
+	box_visibility = $("#upload_file_box")[0]
+	box_visibility.hidden? box_visibility.hidden= false : box_visibility.hidden = true 
+	
+	}
+function shins_function()
+	{
+	alert("SHIN IS COOLER");
+	}
+
+
+
+</script>
+
+<div id="upload_file_box" class="upload_box">
 <table style="padding: 0px; margin: 0px; border: 0px; width: 100%" border="0">
 <tr>
 <td style="text-align: left; width: 50%">
@@ -418,6 +426,13 @@ if(isset($_FILES['uploaded_data_files']))
 </form>
 </td>
 </tr>
+<table>
+</div>
+
+
+<div>
+<table style="padding: 0px; margin: 0px; border: 0px; width: 100%" border="0">
+
 <tr>
 <td colspan="2" style="text-align: left; width: 100%">
 <div id="files-list">
@@ -434,6 +449,11 @@ if(isset($_FILES['uploaded_data_files']))
 
 </td>
 </tr>
+</table>
+</div>
+
+
+<div id="bottom_containers">
 <tr>
 <td colspan="2" style="text-align: left; width: 100%">
 <div id="gridbox" width="100%" height="250px" style="background-color:white;"></div>
@@ -444,8 +464,29 @@ if(isset($_FILES['uploaded_data_files']))
 <div id="gbox" width="100%" height="250px" style="background-color:white;"></div>
 </td>
 </tr>
+</div>
+</div>
 
-</table>
+
+<div id="bobs_stats">
+
+BOBS STATS GO HERE!!!
+Yanhui looks bored
+
+<input type=text id="my_first_stat"></input>
+<input type=text id="my_first_stat"></input>
+<input type=text id="my_first_stat"></input>
+<input type=text id="my_first_stat"></input>
+
+<div id="myfirstnum"  class="my_stats"></div>
+<!-- and then set the  $("#myfirstnum").innerHTML = SOMENUMBER  -->
+
+
+
+</div>
+
+
 </body>
+
 
 </html>

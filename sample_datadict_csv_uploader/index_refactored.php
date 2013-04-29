@@ -95,9 +95,24 @@ if(isset($_FILES['uploaded_data_files']))
 	<link rel="STYLESHEET" type="text/css" href="codebase/dhtmlx.css">
 	<script src="codebase/dhtmlx.js"></script>
 	<script src="codebase/csv2array.js"></script>
+	<script src="validate.js"></script>
+	
+	
+	<style>
+	.upload_box
+		{
+		margin: 2px;
+		border: 1px solid blue;
+		
+		}
+	</style>
 
-<script src='validate.js'></script>
 <script type="text/javascript">
+
+	//define global variables here
+	var atlas_grid ;
+	var csv_data_grid;
+
 	<?php include 'validate.php'; ?>
       function get() {
 	  //alert ("Start Function");
@@ -151,7 +166,7 @@ if(isset($_FILES['uploaded_data_files']))
 		}
 		//alert ("Header Loaded");
 	  
-      
+
 		mygrid = new dhtmlXGridObject('gridbox');
 		mygrid.selMultiRows = true;
 		mygrid.imgURL = "codebase/imgs/icons_greenfolders/";
@@ -161,17 +176,9 @@ if(isset($_FILES['uploaded_data_files']))
 		mygrid.setColAlign(strColAlign);
 		mygrid.setColTypes(strColTypes);
 		mygrid.setColSorting(strColSorting);
-		/*mygrid.setHeader("Tree,Plain Text,Long Text,Color,Checkbox");
-		mygrid.setInitWidths("150,100,100,100,100");
-		mygrid.setColAlign("left,left,left,left,center");
-		mygrid.setColTypes("tree,ed,txt,ch,ch");
-		mygrid.setColSorting("str,str,str,na,str");*/		
 		mygrid.init();
 		mygrid.setSkin("dhx_skyblue");
 		//mygrid.loadXML("codebase/test_list_1.xml");		
-		//mygrid.enableAutoHeigth(true);
-		//alert ("Header Printed");		
-		/*mygrid.setSkin("dhx_skyblue");
 		//alert ("Header Done");*/
 		var parent_id = "";
 		var counter = 0;
@@ -263,27 +270,18 @@ if(isset($_FILES['uploaded_data_files']))
 		//alert ("Header Loaded");
 	  
       
-		mygd = new dhtmlXGridObject('gbox');
-		mygd.selMultiRows = true;
-		mygd.imgURL = "codebase/imgs/icons_greenfolders/";
+		atlas_grid = new dhtmlXGridObject('gbox');
+		atlas_grid.selMultiRows = true;
+		atlas_grid.imgURL = "codebase/imgs/icons_greenfolders/";
 		//alert (strHeader + " : " + strInitWidths + " : " + strColAlign + " : " + strColTypes + " : " + strColSorting);
-		mygd.setHeader(strHead);
-		mygd.setInitWidths(strInitWidth);
-		mygd.setColAlign(strColAl);
-		mygd.setColTypes(strColType);
-		mygd.setColSorting(strColSort);
-		/*mygrid.setHeader("Tree,Plain Text,Long Text,Color,Checkbox");
-		mygrid.setInitWidths("150,100,100,100,100");
-		mygrid.setColAlign("left,left,left,left,center");
-		mygrid.setColTypes("tree,ed,txt,ch,ch");
-		mygrid.setColSorting("str,str,str,na,str");*/		
-		mygd.init();
-		mygd.setSkin("dhx_skyblue");
-		//mygrid.loadXML("codebase/test_list_1.xml");		
-		//mygrid.enableAutoHeigth(true);
-		//alert ("Header Printed");		
-		/*mygrid.setSkin("dhx_skyblue");
-		//alert ("Header Done");*/
+		atlas_grid.setHeader(strHead);
+		atlas_grid.setInitWidths(strInitWidth);
+		atlas_grid.setColAlign(strColAl);
+		atlas_grid.setColTypes(strColType);
+		atlas_grid.setColSorting(strColSort);
+		
+		atlas_grid.init();
+		atlas_grid.setSkin("dhx_skyblue");
 		var txtRow = "";
         for (row = 1; row < arr.length; row++) {
 			for (col = 0; col < arr[row].length; col++) {
@@ -295,7 +293,7 @@ if(isset($_FILES['uploaded_data_files']))
 			  }
 			}
 			try {
-				mygd.addRow((arr[row][0] + counter),txtRow,0,null);
+				atlas_grid.addRow((arr[row][0] + counter),txtRow,0,null);
 			}
 			catch (exception) {
 				alert("Error: " + exception);
@@ -376,6 +374,41 @@ if(isset($_FILES['uploaded_data_files']))
 </head>
 
 <body>
+<div id="header_box" style="border: 1px solid black">
+<h1>WELCOME TO RED Lettr!! LOGO and help buttons go here</h1>
+
+<div id="button_ctrls">
+	<button id="bobs_button" onClick="bobs_function()"  name="BOB ROCKS">BOB</button>
+
+
+	<button id="shin_button" onClick="shins_function()" name="SHIN ROCKS">SHIN</button>
+	<button id="validate_button" onClick="validate_function()" name="Validate">VALIDATE! RUH ROH</button>
+
+
+  </div>
+
+</div>
+
+
+
+<script >
+function bobs_function()
+	{
+	alert("BOB IS COOL");
+	box_visibility = $("#upload_file_box")[0]
+	box_visibility.hidden? box_visibility.hidden= false : box_visibility.hidden = true 
+	
+	}
+function shins_function()
+	{
+	alert("SHIN IS COOLER");
+	}
+
+
+
+</script>
+
+<div id="upload_file_box" class="upload_box">
 <table style="padding: 0px; margin: 0px; border: 0px; width: 100%" border="0">
 <tr>
 <td style="text-align: left; width: 50%">
@@ -418,6 +451,13 @@ if(isset($_FILES['uploaded_data_files']))
 </form>
 </td>
 </tr>
+<table>
+</div>
+
+
+<div>
+<table style="padding: 0px; margin: 0px; border: 0px; width: 100%" border="0">
+
 <tr>
 <td colspan="2" style="text-align: left; width: 100%">
 <div id="files-list">
@@ -434,6 +474,11 @@ if(isset($_FILES['uploaded_data_files']))
 
 </td>
 </tr>
+</table>
+</div>
+
+
+<div id="bottom_containers">
 <tr>
 <td colspan="2" style="text-align: left; width: 100%">
 <div id="gridbox" width="100%" height="250px" style="background-color:white;"></div>
@@ -444,8 +489,29 @@ if(isset($_FILES['uploaded_data_files']))
 <div id="gbox" width="100%" height="250px" style="background-color:white;"></div>
 </td>
 </tr>
+</div>
+</div>
 
-</table>
+
+<div id="bobs_stats">
+
+BOBS STATS GO HERE!!!
+Yanhui looks bored
+
+<input type=text id="my_first_stat"></input>
+<input type=text id="my_first_stat"></input>
+<input type=text id="my_first_stat"></input>
+<input type=text id="my_first_stat"></input>
+
+<div id="myfirstnum"  class="my_stats"></div>
+<!-- and then set the  $("#myfirstnum").innerHTML = SOMENUMBER  -->
+
+
+
+</div>
+
+
 </body>
+
 
 </html>
