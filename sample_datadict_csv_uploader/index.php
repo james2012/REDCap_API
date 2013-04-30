@@ -132,8 +132,6 @@ if(isset($_FILES['uploaded_data_files']))
 	*/ 
 	
 
-	  
-
 	<?php include 'validate.php'; ?>
       function get() {
 
@@ -148,8 +146,7 @@ if(isset($_FILES['uploaded_data_files']))
 		datadict_grid = new dhtmlXGridObject('gridbox');
 		datadict_grid.selMultiRows = true;
 		datadict_grid.imgURL = "codebase/imgs/icons_greenfolders/";
-		//alert (strHeader + " : " + strInitWidths + " : " + strColAlign + " : " + strColTypes + " : " + strColSorting);
-		datadict_grid.setHeader(grid_Header);
+		datadict_grid.setHeader(redcap_datadict.Header);
 		datadict_grid.setInitWidths(redcap_datadict.InitWidths );
 		datadict_grid.setColAlign(redcap_datadict.ColAlign);
 		datadict_grid.setColTypes(redcap_datadict.ColTypes);
@@ -199,7 +196,11 @@ if(isset($_FILES['uploaded_data_files']))
 		
       // show the data in an alert
       // alert(arrayStr)
-	/*
+	
+	datafile_csv = new Object();
+	datafile_csv.raw_csv_data = 'meh';
+	
+	
       var gd = document.getElementById("tbox").value;
       
       // convert data to array
@@ -300,7 +301,7 @@ if(isset($_FILES['uploaded_data_files']))
 			}						
 			//alert ((array[row][1] + counter) + " : " + txtRows + " : " + parent_id);
 		}
-		*/
+		
 
 	  }
   </script>
@@ -342,20 +343,14 @@ if(isset($_FILES['uploaded_data_files']))
 
 <body>
 <div id="header_box" style="border: 1px solid black">
-<h1>WELCOME TO RED Lettr!! LOGO and help buttons go here</h1>
+<h1>Welcome to RED Lettr!! LOGO and help buttons go here</h1>
 
 <div id="button_ctrls">
-	<button id="bobs_button" onClick="bobs_function()"  name="BOB ROCKS">BOB</button>
-
-
-	<button id="shin_button" onClick="shins_function()" name="SHIN ROCKS">SHIN</button>
-	<button id="validate_button" onClick="validate_function()" name="Validate">VALIDATE! RUH ROH</button>
-
-
+	<button id="bobs_button" onClick="bobs_function()"  name="BOB ROCKS">Generate Grid Stats</button>
+	<button id="validate_button" onClick="validate_function()" name="Validate">Validata Data Grid</button>
   </div>
 
 </div>
-
 
 
 <script >
@@ -364,15 +359,7 @@ function bobs_function()
 	alert("BOB IS COOL");
 	box_visibility = $("#upload_file_box")[0]
 	box_visibility.hidden? box_visibility.hidden= false : box_visibility.hidden = true 
-	
 	}
-function shins_function()
-	{
-	alert("SHIN IS COOLER");
-	}
-
-
-
 </script>
 
 <div id="upload_file_box" class="upload_box">
@@ -397,8 +384,6 @@ function shins_function()
 
 <tr>
 <td style="text-align: left; width: 50%">
-<span class="add_field">+</span>
-<span class="remove_field">-</span>
 <form action="upload.php" method="POST" enctype="multipart/form-data">
 	<div class="input_holder">
 		<input type="file" name="uploaded_dict_files[]" id="input_clone" />
@@ -407,8 +392,6 @@ function shins_function()
 </form>
 </td>
 <td style="text-align: left; width: 50%">
-<span class="field_add">+</span>
-<span class="field_remove">-</span>
 <form action="upload.php" method="POST" enctype="multipart/form-data">
 	<div class="holder_input">
 		<input type="file" name="uploaded_data_files[]" id="clone_input" />
@@ -424,7 +407,6 @@ function shins_function()
 
 <div>
 <table style="padding: 0px; margin: 0px; border: 0px; width: 100%" border="0">
-
 <tr>
 <td colspan="2" style="text-align: left; width: 100%">
 <div id="files-list">

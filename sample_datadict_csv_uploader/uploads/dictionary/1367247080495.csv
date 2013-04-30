@@ -1,0 +1,73 @@
+﻿"Variable / Field Name","Form Name","Section Header","Field Type","Field Label","Choices, Calculations, OR Slider Labels","Field Note","Text Validation Type OR Show Slider Number","Text Validation Min","Text Validation Max",Identifier?,"Branching Logic (Show field only if...)","Required Field?","Custom Alignment","Question Number (surveys only)","Matrix Group Name"
+record_id,pain_assessment_and_documentation_tool_padt,,text,"Record ID",,,,,,,,,,,
+padt_patientname,pain_assessment_and_documentation_tool_padt,,text,"Patient Name:",,,,,,y,,y,,,
+padt_record,pain_assessment_and_documentation_tool_padt,,text,"Record #:",,,,,,y,,y,,,
+padt_assdate,pain_assessment_and_documentation_tool_padt,,text,"Assessment Date:",,,date_mdy,,,,,y,,,
+padt_patstamp,pain_assessment_and_documentation_tool_padt,,file,"Patient Stamp Here",,,,,,,,y,,,
+row_1,pain_assessment_and_documentation_tool_padt,"Current Analgesic Regimen",checkbox,1,"1, Drug Name | 2, Strength (eg,mg) | 3, Frequency | 4, Maximum Total Daily Dose",,,,,,,,,,car
+row_2,pain_assessment_and_documentation_tool_padt,,checkbox,2,"1, Drug Name | 2, Strength (eg,mg) | 3, Frequency | 4, Maximum Total Daily Dose",,,,,,,,,,car
+row_3,pain_assessment_and_documentation_tool_padt,,checkbox,3,"1, Drug Name | 2, Strength (eg,mg) | 3, Frequency | 4, Maximum Total Daily Dose",,,,,,,,,,car
+padt_car,pain_assessment_and_documentation_tool_padt,,descriptive,"Current Analgesic Regimen
+",,,,,,,,,,,
+padt_car_drugname,pain_assessment_and_documentation_tool_padt,,text,"Drug Name",,,,,,,,,,,
+padt_car_stren,pain_assessment_and_documentation_tool_padt,,text,"Strength (eg,mg)",,,,,,,,,,,
+padt_car_freq,pain_assessment_and_documentation_tool_padt,,text,Frequency,,,,,,,,,,,
+padt_car_maxdose,pain_assessment_and_documentation_tool_padt,,text,"Maximum Total Daily Dose",,,,,,,,,,,
+padt_car_drugname2_eab,pain_assessment_and_documentation_tool_padt,,text,"Drug Name",,,,,,,,,,,
+padt_car_stren2_a2c,pain_assessment_and_documentation_tool_padt,,text,"Strength (eg,mg)",,,,,,,,,,,
+padt_car_freq2_c77,pain_assessment_and_documentation_tool_padt,,text,Frequency,,,,,,,,,,,
+padt_car_maxdose2_d60,pain_assessment_and_documentation_tool_padt,,text,"Maximum Total Daily Dose",,,,,,,,,,,
+padt_car_drugname2_05d,pain_assessment_and_documentation_tool_padt,,text,"Drug Name",,,,,,,,,,,
+padt_car_stren2_65a,pain_assessment_and_documentation_tool_padt,,text,"Strength (eg,mg)",,,,,,,,,,,
+padt_car_freq2_5a2,pain_assessment_and_documentation_tool_padt,,text,Frequency,,,,,,,,,,,
+padt_car_maxdose2_725,pain_assessment_and_documentation_tool_padt,,text,"Maximum Total Daily Dose",,,,,,,,,,,
+padt_note,pain_assessment_and_documentation_tool_padt,,descriptive,"The PADT is a clinician_directed interview; that is, the clinician asks the questions, and the clinician records the responses. The Analgesia, Activities of Daily Living, and Adverse Events sections may be completed by the physician, nurse practitioner, physician assistant, or nurse. The Potential Aberrant Drug‐Related Behavior and Assessment sections must be completed by the physician. Ask the patient the questions below, except as noted.",,,,,,,,,,,
+padt_anal,pain_assessment_and_documentation_tool_padt,,descriptive,"Analgesia
+",,,,,,,,,,,
+padt_anal_note,pain_assessment_and_documentation_tool_padt,,descriptive,"If zero indicates ""no pain"" and ten indicates ""pain as bad as it can be,"" on a scale of 0 to 10, what is your level of pain for the following questions?",,,,,,,,,,,
+padt_anal_1,pain_assessment_and_documentation_tool_padt,,radio,"1. What was your pain level on average during the past
+week? (Please circle the appropriate number)","10, No Pain 0 | 1, 1 | 2, 2 | 3, 3 | 4, 4 | 5, 5 | 6, 6 | 7, 7 | 8, 8 | 9, 9 | 11, 10 Pain as bad as it can be",,,,,,,,LH,,
+padt_anal_2,pain_assessment_and_documentation_tool_padt,,radio,"2. What was your pain level at its worst during the past
+week?","10, No Pain 0 | 1, 1 | 2, 2 | 3, 3 | 4, 4 | 5, 5 | 6, 6 | 7, 7 | 8, 8 | 9, 9 | 11, 10 Pain as bad as it can be",,,,,,,,LH,,
+padt_anal_3,pain_assessment_and_documentation_tool_padt,,text,"3. What percentage of your pain has been relieved
+during the past week? (Write in a percentage
+between 0% and 100%.)",,,number,0,1,,,,LH,,
+padt_anal_4,pain_assessment_and_documentation_tool_padt,,yesno,"4. Is the amount of pain relief you are now obtaining
+from your current pain reliever(s) enough to make a
+real difference in your life?",,,,,,,,,LH,,
+padt_anal_5,pain_assessment_and_documentation_tool_padt,,radio,"5. Query to clinician: Is the patient's pain relief
+clinically significant?","1, Yes | 2, No | 3, Unsure",,,,,,,,LH,,
+padt_act,pain_assessment_and_documentation_tool_padt,,descriptive,"Activities of Daily Living",,,,,,,,,,,
+padt_act_note,pain_assessment_and_documentation_tool_padt,,descriptive,"Please indicate whether the patient's functioning with the current pain reliever(s) is Better, the Same, or Worse since the patient's last assessment with the PADT.* (Please check the box for Better, Same, or Worse for each item below.)",,,,,,,,,,,
+padt_act_1,pain_assessment_and_documentation_tool_padt,,radio,"1. Physical functioning","1, Better | 2, Same | 3, Worse",,,,,,,,,,padt_act_matrix
+padt_act_2,pain_assessment_and_documentation_tool_padt,,radio,"2. Family relationships","1, Better | 2, Same | 3, Worse",,,,,,,,,,padt_act_matrix
+padt_act_3,pain_assessment_and_documentation_tool_padt,,radio,"3. Social relationships","1, Better | 2, Same | 3, Worse",,,,,,,,,,padt_act_matrix
+padt_act_4,pain_assessment_and_documentation_tool_padt,,radio,"4. Mood","1, Better | 2, Same | 3, Worse",,,,,,,,,,padt_act_matrix
+padt_act_5,pain_assessment_and_documentation_tool_padt,,radio,"5. Sleep patterns","1, Better | 2, Same | 3, Worse",,,,,,,,,,padt_act_matrix
+padt_act_6,pain_assessment_and_documentation_tool_padt,,radio,"6. Overall functioning","1, Better | 2, Same | 3, Worse",,,,,,,,,,padt_act_matrix
+padt_act_note2,pain_assessment_and_documentation_tool_padt,,descriptive,"*If the patient is receiving his or her first PADT assessment, the clinician should compare the patient's functional status with other reports from the last office visit.",,,,,,,,,,,
+padt_adv,pain_assessment_and_documentation_tool_padt,,descriptive,"Adverse Events",,,,,,,,,,,
+padt_adv_1,pain_assessment_and_documentation_tool_padt,,yesno,"1. Is patient experiencing any side effects from current
+pain reliever?",,,,,,,,,RH,,
+padt_adv_a,pain_assessment_and_documentation_tool_padt,"Ask patient about potential side effects:",radio,"a. Nausea","1, None | 2, Mild | 3, Moderate | 4, Severe",,,,,,,,,,padt_adv_mat
+padt_adv_b,pain_assessment_and_documentation_tool_padt,,radio,"b. Vomiting","1, None | 2, Mild | 3, Moderate | 4, Severe",,,,,,,,,,padt_adv_mat
+padt_adv_c,pain_assessment_and_documentation_tool_padt,,radio,"c. Constipation","1, None | 2, Mild | 3, Moderate | 4, Severe",,,,,,,,,,padt_adv_mat
+padt_adv_d,pain_assessment_and_documentation_tool_padt,,radio,"d. Itching","1, None | 2, Mild | 3, Moderate | 4, Severe",,,,,,,,,,padt_adv_mat
+padt_adv_e,pain_assessment_and_documentation_tool_padt,,radio,"e. Mental cloudiness","1, None | 2, Mild | 3, Moderate | 4, Severe",,,,,,,,,,padt_adv_mat
+padt_adv_f,pain_assessment_and_documentation_tool_padt,,radio,"f. Sweating","1, None | 2, Mild | 3, Moderate | 4, Severe",,,,,,,,,,padt_adv_mat
+padt_adv_g,pain_assessment_and_documentation_tool_padt,,radio,"g. Fatigue","1, None | 2, Mild | 3, Moderate | 4, Severe",,,,,,,,,,padt_adv_mat
+padt_adv_h,pain_assessment_and_documentation_tool_padt,,radio,"h. Drowsiness","1, None | 2, Mild | 3, Moderate | 4, Severe",,,,,,,,,,padt_adv_mat
+padt_adv_i,pain_assessment_and_documentation_tool_padt,,radio,"i. Other___________________","1, None | 2, Mild | 3, Moderate | 4, Severe",,,,,,,,,,padt_adv_mat
+padt_adv_j,pain_assessment_and_documentation_tool_padt,,radio,"j. Other___________________","1, None | 2, Mild | 3, Moderate | 4, Severe",,,,,,,,,,padt_adv_mat
+padt_adv_poten,pain_assessment_and_documentation_tool_padt,,descriptive,"Potential Aberrant Drug‐Related Behavior
+This section must be completed by the physician",,,,,,,,,,,
+padt_adv_potenchoice,pain_assessment_and_documentation_tool_padt,,checkbox,"Please check any of the following items that you discovered during your interactions with the patient.
+Please note that some of these are directly observable (eg, appears intoxicated), while others may require more active listening and/or probing. Use the ""Assessment"" section below to note additional details.","1, Purposeful over‐sedation | 2, Negative mood change | 3, Appears intoxicated | 4, Increasingly unkempt or impaired | 5, Involvement in car or other accident | 6, Requests frequent early renewals | 7, Increased dose without authorization | 8, Reports lost or stolen prescriptions | 9, Attempts to obtain prescriptions from other doctors | 10, Changes route of administration | 11, Uses pain medication in response to situational stressor | 12, Insists on certain medications by name | 13, Contact with street drug culture | 14, Abusing alcohol or illicit drugs | 15, Hoarding (ie, stockpiling) of medication | 16, Arrested by police | 17, Victim of abuse | 18, Other: ___________________________",,,,,,,,,,
+padt_adv_2,pain_assessment_and_documentation_tool_padt,,radio,"2. Patients overall severity of side effects?","1, None | 2, Mild | 3, Moderate | 4, Severe",,,,,,,,LH,,
+padt_adv_2_1,pain_assessment_and_documentation_tool_padt,,yesno,"Assessment: (This section must be completed by the physician.)
+Is your overall impression that this patient is benefiting (eg, benefits, such as pain relief, outweigh side effects) from opioid therapy?",,,,,,,,,RH,,
+padt_adv_2_2,pain_assessment_and_documentation_tool_padt,,notes,Comments:,,,,,,,,,RH,,
+padt_adv_plan,pain_assessment_and_documentation_tool_padt,,checkbox,"Specific Analgesic Plan:","1, Continue present regimen | 2, Adjust dose of present analgesic | 3, Switch analgesics | 4, Add/Adjust concomitant therapy | 5, Discontinue/taper off opioid therapy",,,,,,,,,,
+padt_adv_plancomm,pain_assessment_and_documentation_tool_padt,,notes,Comments:,,,,,,,,,RH,,
+padt_date,pain_assessment_and_documentation_tool_padt,,text,Date:,,,date_mdy,,,,,y,,,
+padt_physig,pain_assessment_and_documentation_tool_padt,,text,"Physicians Signature:",,,,,,y,,y,,,
