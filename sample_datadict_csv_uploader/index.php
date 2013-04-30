@@ -110,14 +110,13 @@ if(isset($_FILES['uploaded_data_files']))
 		{
 		margin: 2px;
 		border: 1px solid blue;
-		
 		}
 	</style>
 
 <script type="text/javascript">
 
 	//define global variables here
-	var atlas_grid ;
+	var data_tobe_validated_grid ;
 	var csv_data_grid;
 	var data_dictionary_as_str;
 	
@@ -143,7 +142,7 @@ if(isset($_FILES['uploaded_data_files']))
 
    
    		
-		datadict_grid = new dhtmlXGridObject('gridbox');
+		datadict_grid = new dhtmlXGridObject('datadict_gridbox');
 		datadict_grid.selMultiRows = true;
 		datadict_grid.imgURL = "codebase/imgs/icons_greenfolders/";
 		datadict_grid.setHeader(redcap_datadict.Header);
@@ -159,6 +158,8 @@ if(isset($_FILES['uploaded_data_files']))
  
  
  
+ 
+ 	/* Below code is necessary because of the way grid was setup as a tree... */
  
         for (row = 1; row < array.length; row++) {
 			if (array[row][1] != parent_id) {
@@ -197,11 +198,12 @@ if(isset($_FILES['uploaded_data_files']))
       // show the data in an alert
       // alert(arrayStr)
 	
-	datafile_csv = new Object();
-	datafile_csv.raw_csv_data = 'meh';
 	
 	
       var gd = document.getElementById("tbox").value;
+
+
+      
       
       // convert data to array
       try {
@@ -211,6 +213,12 @@ if(isset($_FILES['uploaded_data_files']))
         alert("Error: " + exception);
         return;
       }
+
+
+	//  datafile_csv = new Object();
+	//  datafile_csv.raw_csv_data = gd;     
+    //  array = convert_csvstring_to_object( datafile_csv  );
+
 
       // convert the array back to a string
       var strHead = "";
@@ -248,7 +256,8 @@ if(isset($_FILES['uploaded_data_files']))
 			strColSort += "str,";
 		  }
 		}
-		//alert ("Header Loaded");
+		/*
+			
 	      for (row = 1; row < arr.length; row++) {
 			for (col = 0; col < arr[row].length; col++) {
 			  if (col == (arr[row].length - 1)) {
@@ -259,34 +268,41 @@ if(isset($_FILES['uploaded_data_files']))
 			  }
 			}
 			try {
-				atlas_grid.addRow((arr[row][0] + counter),txtRow,0,null);
+				
+				data_tobe_validated_grid.addRow((arr[row][0] + counter),txtRow,0,null);
+	
 			}
 			catch (exception) {
-				alert("Error: " + exception);
+				alert("Error failing in bottom grid: " + exception);
 			}						
 			//alert ((array[row][1] + counter) + " : " + txtRows + " : " + parent_id);
 		}
-
+*/
 
 
 
       
-		atlas_grid = new dhtmlXGridObject('gbox');
-		atlas_grid.selMultiRows = true;
-		atlas_grid.imgURL = "codebase/imgs/icons_greenfolders/";
-		//alert (strHeader + " : " + strInitWidths + " : " + strColAlign + " : " + strColTypes + " : " + strColSorting);
-		atlas_grid.setHeader(strHead);
-		atlas_grid.setInitWidths(strInitWidth);
-		atlas_grid.setColAlign(strColAl);
-		atlas_grid.setColTypes(strColType);
-		atlas_grid.setColSorting(strColSort);
+		data_tobe_validated_grid = new dhtmlXGridObject('data_gridbox');
+		data_tobe_validated_grid.selMultiRows = true;
+		data_tobe_validated_grid.imgURL = "codebase/imgs/icons_greenfolders/";
+		data_tobe_validated_grid.setHeader(strHead);
+		data_tobe_validated_grid.setInitWidths(strInitWidth);
+		data_tobe_validated_grid.setColAlign(strColAl);
+		data_tobe_validated_grid.setColTypes(strColType);
+		data_tobe_validated_grid.setColSorting(strColSort);
 		
-		atlas_grid.init();
-		atlas_grid.setSkin("dhx_skyblue");
+		data_tobe_validated_grid.init();
+		data_tobe_validated_grid.setSkin("dhx_skyblue");
+	//	add_data_to_grid( data_tobe_validated_grid, datafile_csv);
+
+
 		var txtRow = "";
         for (row = 1; row < arr.length; row++) {
 			for (col = 0; col < arr[row].length; col++) {
 			  if (col == (arr[row].length - 1)) {
+
+
+
 				txtRow += arr[row][col];
 			  }
 			  else {
@@ -294,7 +310,7 @@ if(isset($_FILES['uploaded_data_files']))
 			  }
 			}
 			try {
-				atlas_grid.addRow((arr[row][0] + counter),txtRow,0,null);
+				data_tobe_validated_grid.addRow((arr[row][0] + counter),txtRow,0,null);
 			}
 			catch (exception) {
 				alert("Error: " + exception);
@@ -413,6 +429,10 @@ function bobs_function()
 <select id="flist"><option value="">Select from uploaded files</option></select>
 <input type="button" value="Get Array from CSV" onclick="get();">
 </div>
+<!-- this is a weird way to store data and will be removed in the near future...
+currently we are saving read in input into textboxes which seems a bit odd
+-->
+
 <textarea rows="40" cols="400" id="textbox" style="display: none"></textarea>
 <textarea rows="40" cols="400" id="xmlbox" style="display: none"></textarea>
 <textarea rows="40" cols="400" id="databox" style="display: none"></textarea>
@@ -430,12 +450,12 @@ function bobs_function()
 <div id="bottom_containers">
 <tr>
 <td colspan="2" style="text-align: left; width: 100%">
-<div id="gridbox" width="100%" height="250px" style="background-color:white;"></div>
+<div id="datadict_gridbox" width="100%" height="250px" style="background-color:white;"></div>
 </td>
 </tr>
 <tr>
 <td colspan="2" style="text-align: left; width: 100%">
-<div id="gbox" width="100%" height="250px" style="background-color:white;"></div>
+<div id="data_gridbox" width="100%" height="250px" style="background-color:white;"></div>
 </td>
 </tr>
 </div>
@@ -443,19 +463,11 @@ function bobs_function()
 
 
 <div id="bobs_stats">
-
-BOBS STATS GO HERE!!!
-Yanhui looks bored
-
-<input type=text id="my_first_stat"></input>
-<input type=text id="my_first_stat"></input>
-<input type=text id="my_first_stat"></input>
-<input type=text id="my_first_stat"></input>
-
-<div id="myfirstnum"  class="my_stats"></div>
+Stats:
+Number of elements in data dict:<br>
+Number of rows in uploaded data file:<br>
+Number of columsn in uploaded data dict:<br>
 <!-- and then set the  $("#myfirstnum").innerHTML = SOMENUMBER  -->
-
-
 
 </div>
 

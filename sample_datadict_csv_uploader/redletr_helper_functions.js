@@ -74,3 +74,31 @@ function generate_grid_header( datagrid_config_object )
 	
 	}	
 	
+function add_data_to_grid ( dhtmlxgrid_object, csvdata_object)
+	{
+	/* This function will add data contained in the uploaded CSV files to the dhtmlx data grid */
+
+	var arr = csvdata_object.data_as_array;
+	
+	
+	  for (row = 1; row < arr.length; row++) {
+              for (col = 0; col < arr[row].length; col++) {
+      if (col == (arr[row].length - 1)) {
+  txtRow += arr[row][col];
+  }
+     else {
+    txtRow += arr[row][col] + ",";
+}
+}  try {
+	                dhtmlxgrid_object.addRow((arr[row][0] + counter),txtRow,0,null);
+	          }
+catch (exception) {
+	  alert("Error: " + exception);
+	              }
+	        //alert ((array[row][1] + counter) + " : " + txtRows + " : " + parent_id);
+	                }
+	                
+                
+	    }
+	
+	
