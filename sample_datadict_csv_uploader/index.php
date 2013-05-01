@@ -103,7 +103,16 @@ if(isset($_FILES['uploaded_data_files']))
 	<script src="codebase/csv2array.js"></script>
 	<script src="validate.js"></script>
 	<script src="redletr_helper_functions.js"></script>
-	
+<!--	<script src="jquery-1.8.2.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
+
+	<script src="jquery.csv-0.71.js"></script>-->
+
+<script src="http://code.jquery.com/jquery-1.8.2.js"></script>
+<link href="http://code.jquery.com/ui/1.9.0/themes/cupertino/jquery-ui.css" rel="stylesheet" />
+<script src="http://code.jquery.com/ui/1.9.0/jquery-ui.js"></script>
+<script></script>
+<script src="http://jquery-csv.googlecode.com/git/src/jquery.csv.js"></script>
 	
 	<style>
 	.upload_box
@@ -116,7 +125,7 @@ if(isset($_FILES['uploaded_data_files']))
 <script type="text/javascript">
 
 	//define global variables here
-	var data_tobe_validated_grid ;
+	var csvdatafile_grid ;
 	var csv_data_grid;
 	var data_dictionary_as_str;
 	
@@ -134,131 +143,47 @@ if(isset($_FILES['uploaded_data_files']))
 	<?php include 'validate.php'; ?>
       function get() {
 
-      // retrieve data
+      // retrieve data--- first get the data dictionary for the data set
       redcap_datadict.raw_csv_data = document.getElementById("textbox").value;
-
       // convert data to array
-      array = convert_csvstring_to_object( redcap_datadict  );
+       convert_csvstring_to_object( redcap_datadict  );
 
-   
    		
 		datadict_grid = new dhtmlXGridObject('datadict_gridbox');
 		datadict_grid.selMultiRows = true;
 		datadict_grid.imgURL = "codebase/imgs/icons_greenfolders/";
+		
+		
+		/* Now set the alignment, widths, header, etc.. for the current datagrid */
 		datadict_grid.setHeader(redcap_datadict.Header);
 		datadict_grid.setInitWidths(redcap_datadict.InitWidths );
 		datadict_grid.setColAlign(redcap_datadict.ColAlign);
 		datadict_grid.setColTypes(redcap_datadict.ColTypes);
 		datadict_grid.setColSorting(redcap_datadict.ColSorting);
+		datadict_grid.attachHeader("#text_filter,#select_filter,#numeric_filter");
+
 		datadict_grid.init();
 		datadict_grid.setSkin("dhx_skyblue");
+		
+/* move below to the function */
 		var parent_id = "";
 		var counter = 0;
-		var txtRows = "";
+		var txtRow = "";
+	   arr = redcap_datadict.data_as_array;
  
- 
- 
- 
- 	/* Below code is necessary because of the way grid was setup as a tree... */
- 
-        for (row = 1; row < array.length; row++) {
-			if (array[row][1] != parent_id) {
-				//alert (array[row][1]);			
-				try {
-					datadict_grid.addRow(array[row][1],array[row][1],0,null,"folder.gif");
-				}
-				catch (exception) {
-					alert("Error: " + exception);
-				}			
-				counter = 0;
-				parent_id = array[row][1];
-			}
-			++counter;
-			txtRows = array[row][1] + "," + array[row][0] + ",";
-			for (col = 2; col < array[row].length; col++) {
-			  if (col == (array[row].length - 1)) {
-				txtRows += array[row][col];
-			  }
-			  else {
-				txtRows += array[row][col] + ",";			  
-			  }
-			}
-			try {
-				datadict_grid.addRow((array[row][1] + counter),txtRows,0,parent_id);
-			}
-			catch (exception) {
-				alert("Error: " + exception);
-			}						
-			//alert ((array[row][1] + counter) + " : " + txtRows + " : " + parent_id);
-		}
-		
-	    //datadict_grid.parse(strXML);
-		/*datadict_grid.init();*/				
-		
-      // show the data in an alert
-      // alert(arrayStr)
+ 	/* It would be much more elegant to simply prune the string at the end of the loop */
+
+	cols_in_datadict = arr[1].length;
+	rows_in_datadict = arr.length;
 	
-	
-	
-      var gd = document.getElementById("tbox").value;
+ 	//ert( rows_in_datadict+'and cols:'+cols_in_datadict);
 
-
-      
-      
-      // convert data to array
-      try {
-        var arr = csv2array(gd);
-      }
-      catch (exception) {
-        alert("Error: " + exception);
-        return;
-      }
-
-
-	//  datafile_csv = new Object();
-	//  datafile_csv.raw_csv_data = gd;     
-    //  array = convert_csvstring_to_object( datafile_csv  );
-
-
-      // convert the array back to a string
-      var strHead = "";
-	  var strInitWidth = "";
-	  var strColAl = "";
-	  var strColType = "";
-	  var strColSort = "";
-		for (col = 0; col < arr[0].length; col++) {
-		  if (col == (arr[0].length - 1)) {
-			strHead += arr[0][col].replace(/,/g,';');
-			strInitWidth += "200";
-			strColAl += "left";
-			strColType += "txt";	
-			strColSort += "str";			
-		  }
-		  else {
-			if (col == 0) {
-				strColType += "tree,";			
-			}
-			else {
-				strColType += "txt,";			
-			}
-			if (col == 1) {
-				strHead += arr[0][0].replace(/,/g,';') + ",";
-			}
-			if (col == 0) {
-				strHead += arr[0][1].replace(/,/g,';') + ",";
-			}
-			if (col > 1) {
-				strHead += arr[0][col].replace(/,/g,';') + ",";
-			}
-
-			strInitWidth += "200,";
-			strColAl += "left,";
-			strColSort += "str,";
-		  }
-		}
-		/*
-			
+	/*please recheck this syntax-- unclear if the counter is doing anything or not.... */
+ 	
 	      for (row = 1; row < arr.length; row++) {
+		var txtRow="";
+		
+		
 			for (col = 0; col < arr[row].length; col++) {
 			  if (col == (arr[row].length - 1)) {
 				txtRow += arr[row][col];
@@ -267,42 +192,48 @@ if(isset($_FILES['uploaded_data_files']))
 				txtRow += arr[row][col] + ",";			  
 			  }
 			}
+
 			try {
-				
-				data_tobe_validated_grid.addRow((arr[row][0] + counter),txtRow,0,null);
-	
+				datadict_grid.addRow((arr[row][0] + counter),txtRow,0,null);
 			}
 			catch (exception) {
 				alert("Error failing in bottom grid: " + exception);
 			}						
 			//alert ((array[row][1] + counter) + " : " + txtRows + " : " + parent_id);
 		}
-*/
 
-
+ 
+ 
+	
+	/* Now loading and populating the data for the CSV data */
+	
+      var gd = document.getElementById("tbox").value;
+	  datafile_csv = new Object();
+	  datafile_csv.raw_csv_data = gd;     
+	   convert_csvstring_to_object( datafile_csv  );
+     
+        arr = datafile_csv.data_as_array;
 
       
-		data_tobe_validated_grid = new dhtmlXGridObject('data_gridbox');
-		data_tobe_validated_grid.selMultiRows = true;
-		data_tobe_validated_grid.imgURL = "codebase/imgs/icons_greenfolders/";
-		data_tobe_validated_grid.setHeader(strHead);
-		data_tobe_validated_grid.setInitWidths(strInitWidth);
-		data_tobe_validated_grid.setColAlign(strColAl);
-		data_tobe_validated_grid.setColTypes(strColType);
-		data_tobe_validated_grid.setColSorting(strColSort);
+		csvdatafile_grid = new dhtmlXGridObject('data_gridbox');
+		csvdatafile_grid.selMultiRows = true;
+		csvdatafile_grid.imgURL = "codebase/imgs/icons_greenfolders/";
 		
-		data_tobe_validated_grid.init();
-		data_tobe_validated_grid.setSkin("dhx_skyblue");
-	//	add_data_to_grid( data_tobe_validated_grid, datafile_csv);
-
-
-		var txtRow = "";
+		/*Set Grid configuration parameters */
+		csvdatafile_grid.setHeader(datafile_csv.Header);
+		csvdatafile_grid.setInitWidths(datafile_csv.InitWidths);
+		csvdatafile_grid.setColAlign(datafile_csv.ColAlign);
+		csvdatafile_grid.setColTypes(datafile_csv.ColTypes);
+		csvdatafile_grid.setColSorting(datafile_csv.ColSorting);
+		
+		csvdatafile_grid.init();
+		csvdatafile_grid.setSkin("dhx_skyblue");
+//		add_data_to_grid( csvdatafile_grid, datafile_csv);
         for (row = 1; row < arr.length; row++) {
+		var txtRow = "";
+
 			for (col = 0; col < arr[row].length; col++) {
 			  if (col == (arr[row].length - 1)) {
-
-
-
 				txtRow += arr[row][col];
 			  }
 			  else {
@@ -310,7 +241,7 @@ if(isset($_FILES['uploaded_data_files']))
 			  }
 			}
 			try {
-				data_tobe_validated_grid.addRow((arr[row][0] + counter),txtRow,0,null);
+				csvdatafile_grid.addRow((arr[row][0] + counter),txtRow,0,null);
 			}
 			catch (exception) {
 				alert("Error: " + exception);
@@ -322,7 +253,6 @@ if(isset($_FILES['uploaded_data_files']))
 	  }
   </script>
 	
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
 	
 	<script type="text/javascript">
 	$(document).ready(function(){
@@ -368,11 +298,9 @@ if(isset($_FILES['uploaded_data_files']))
 
 </div>
 
-
 <script >
 function bobs_function()
 	{
-	alert("BOB IS COOL");
 	box_visibility = $("#upload_file_box")[0]
 	box_visibility.hidden? box_visibility.hidden= false : box_visibility.hidden = true 
 	}
@@ -380,26 +308,17 @@ function bobs_function()
 
 <div id="upload_file_box" class="upload_box">
 <table style="padding: 0px; margin: 0px; border: 0px; width: 100%" border="0">
-<tr>
-<td style="text-align: left; width: 50%">
-<div class="left_header">Upload Dictionary File:</div>
-</td>
-<td style="text-align: left; width: 50%">
-<div class="right_header">Upload Data File:</div>
-</td>
-</tr>
+<tr><td style="text-align: left; width: 50%">
+<div class="left_header">Upload Dictionary File:</div></td>
+<td style="text-align: left; width: 50%"><div class="right_header">Upload Data File:</div></td></tr>
 
 <tr>
+<td style="text-align: left; width: 50%"><div class="left_header">&nbsp;</div></td>
 <td style="text-align: left; width: 50%">
-<div class="left_header">&nbsp;</div>
-</td>
-<td style="text-align: left; width: 50%">
-<div class="right_header">&nbsp;</div>
-</td>
+<div class="right_header">&nbsp;</div></td>
 </tr>
 
-<tr>
-<td style="text-align: left; width: 50%">
+<tr><td style="text-align: left; width: 50%">
 <form action="upload.php" method="POST" enctype="multipart/form-data">
 	<div class="input_holder">
 		<input type="file" name="uploaded_dict_files[]" id="input_clone" />
@@ -423,8 +342,7 @@ function bobs_function()
 
 <div>
 <table style="padding: 0px; margin: 0px; border: 0px; width: 100%" border="0">
-<tr>
-<td colspan="2" style="text-align: left; width: 100%">
+<tr><td colspan="2" style="text-align: left; width: 100%">
 <div id="files-list">
 <select id="flist"><option value="">Select from uploaded files</option></select>
 <input type="button" value="Get Array from CSV" onclick="get();">
@@ -433,6 +351,8 @@ function bobs_function()
 currently we are saving read in input into textboxes which seems a bit odd
 -->
 
+
+<!-- style="display: none"-->
 <textarea rows="40" cols="400" id="textbox" style="display: none"></textarea>
 <textarea rows="40" cols="400" id="xmlbox" style="display: none"></textarea>
 <textarea rows="40" cols="400" id="databox" style="display: none"></textarea>
@@ -441,11 +361,10 @@ currently we are saving read in input into textboxes which seems a bit odd
 <textarea rows="40" cols="400" id="xbox" style="display: none"></textarea>
 <textarea rows="40" cols="400" id="dbox" style="display: none"></textarea>
 
-</td>
-</tr>
-</table>
-</div>
+</td></tr>
+</table></div>
 
+<!-- need to refactor this to not use a table layout at some point -->
 
 <div id="bottom_containers">
 <tr>
@@ -467,6 +386,9 @@ Stats:
 Number of elements in data dict:<br>
 Number of rows in uploaded data file:<br>
 Number of columsn in uploaded data dict:<br>
+
+<div id="form_filter_div"></div>
+
 <!-- and then set the  $("#myfirstnum").innerHTML = SOMENUMBER  -->
 
 </div>

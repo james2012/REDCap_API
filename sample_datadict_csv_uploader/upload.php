@@ -231,35 +231,13 @@ if(isset($_FILES['uploaded_data_files']))
 	  var strColType = "";
 	  var strColSort = "";
 		for (col = 0; col < arr[0].length; col++) {
-		  if (col == (arr[0].length - 1)) {
-			strHead += arr[0][col].replace(/,/g,';');
+			strHead += header_line[col].replace(/,/g,';');
 			strInitWidth += "200";
 			strColAl += "left";
 			strColType += "txt";	
 			strColSort += "str";			
 		  }
-		  else {
-			if (col == 0) {
-				strColType += "tree,";			
-			}
-			else {
-				strColType += "txt,";			
-			}
-			if (col == 1) {
-				strHead += arr[0][0].replace(/,/g,';') + ",";
-			}
-			if (col == 0) {
-				strHead += arr[0][1].replace(/,/g,';') + ",";
-			}
-			if (col > 1) {
-				strHead += arr[0][col].replace(/,/g,';') + ",";
-			}
-
-			strInitWidth += "200,";
-			strColAl += "left,";
-			strColSort += "str,";
-		  }
-		}
+		
 		//alert ("Header Loaded");
 	  
       

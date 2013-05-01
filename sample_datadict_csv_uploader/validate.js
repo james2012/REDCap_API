@@ -73,27 +73,27 @@ function isIntegerWithinRange(input, min, max) {
 
 function validate() {
 	var col_dic = new Array();
-	mygrid.forEachRow(function (id) {
-		var dict_col = mygrid.cells(id, 1).getValue();
+	datadict_grid.forEachRow(function (id) {
+		var dict_col = datadict_grid.cells(id, 1).getValue();
 		if (dict_col != "") {
 		    col_dic.push(dict_col)
 		};
 	});
 
-	for (var i = 0; i < atlas_grid.getColumnsNum(); i++) { 
-			var col_id = atlas_grid.getColumnLabel(i); 
+	for (var i = 0; i < csvdatafile_grid.getColumnsNum(); i++) { 
+			var col_id = csvdatafile_grid.getColumnLabel(i); 
 			var col_index = col_dic.indexOf(col_id);
 			if (col_index == -1) {  
-				atlas_grid.forEachRow(function (id) {     
-					atlas_grid.setCellTextStyle(id, i, "background-color: grey");
+				csvdatafile_grid.forEachRow(function (id) {     
+					csvdatafile_grid.setCellTextStyle(id, i, "background-color: grey");
 				});
 			}
 			else {//do the harlem shake
-				atlas_grid.forEachRow(function (id) {
-					var cell_value=atlas_grid.cells(id, i).getValue();
+				csvdatafile_grid.forEachRow(function (id) {
+					var cell_value=csvdatafile_grid.cells(id, i).getValue();
 					//validation for NULL
 					if (isNull(cell_value)){
-						atlas_grid.setCellTextStyle(id, i, "background-color: orange");
+						csvdatafile_grid.setCellTextStyle(id, i, "background-color: orange");
 					}
 					//ADD YOUR FUNCTIONS FOR OTHER TYPES OF VALIDATION
 
@@ -101,22 +101,24 @@ function validate() {
 					// Yanhui's validation
 					//	bool isBoolean(input) Returns true if input is either “true” or “false”
 					if(isBoolean(cell_value)){
-						atlas_grid.setCellTextStyle(id,i,"background-color: green");
+						csvdatafile_grid.setCellTextStyle(id,i,"background-color: green");
+						//csvdatafile_grid.cells(id,i).setBgColor('green');
+
 					}
 					//	bool isYesNo(input)	Returns true if input is either “yes” or “no”
 					if(isYesNo(cell_value)){
-						atlas_grid.setCellTextStyle(id,i,"background-color: green");
+						csvdatafile_grid.setCellTextStyle(id,i,"background-color: green");
 					}
 					//	bool correctYesNo(input)	Returns true if yes and false if no.
 					if(correctYesNo(cell_value)){
-						atlas_grid.setCellTextStyle(id,i,"background-color: green");
+						csvdatafile_grid.setCellTextStyle(id,i,"background-color: green");
 					}
 
 					if(isInteger(cell_value)){
-						atlas_grid.setCellTextStyle(id,i,"background-color: green");
+						csvdatafile_grid.setCellTextStyle(id,i,"background-color: green");
 					}
 					if(isNumber(cell_value)){
-						atlas_grid.setCellTextStyle(id,i,"background-color: green");
+						csvdatafile_grid.setCellTextStyle(id,i,"background-color: green");
 					}
 
 
