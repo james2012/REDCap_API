@@ -102,18 +102,13 @@ if(isset($_FILES['uploaded_data_files']))
 	<script src="codebase/dhtmlx.js"></script>
 	<script src="codebase/csv2array.js"></script>
 	<script src="validate.js"></script>
-<!--	<script src="jquery-1.8.2.min.js"></script>
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
 
-	<script src="jquery.csv-0.71.js"></script>-->
 
 <script src="http://code.jquery.com/jquery-1.8.2.js"></script>
-<link href="http://code.jquery.com/ui/1.9.0/themes/cupertino/jquery-ui.css" rel="stylesheet" />
-<script src="http://code.jquery.com/ui/1.9.0/jquery-ui.js"></script>
-<script></script>
+
 <script src="http://jquery-csv.googlecode.com/git/src/jquery.csv.js"></script>
 	<script src="redletr_helper_functions.js"></script>
-	
+	<script src="temp_functions.js"></script>
 	<style>
 	.upload_box
 		{
@@ -127,7 +122,6 @@ if(isset($_FILES['uploaded_data_files']))
 	//define global variables here
 	var csvdatafile_grid ;
 	var csv_data_grid;
-	
 	var redcap_datadict = new Object();
 	
 	/* This object will contain all of the data and parameters associated with the grid that holds the redcap_datadict object...
@@ -142,15 +136,10 @@ if(isset($_FILES['uploaded_data_files']))
       function get() {
 
       // retrieve data--- first get the data dictionary for the data set
-		datadict_text =  document.getElementById("textbox").value;
-		//datadict_text = datadict_text.substring(1);
-		//	    datadict_text = datadict_text.slice(0,-1);
-	    //alert(datadict_text);
-		//also need to remove trailing "
+	datadict_text =  document.getElementById("textbox").value;
+	
       redcap_datadict.raw_csv_data = document.getElementById("textbox").value;
-	/* so this is an idiosyncracy of the redcap data dict.. for some reason it wraps the entire file in "data" so I need to
-	remove the first " */
-
+	
       // convert data to array
        convert_csvstring_to_object( redcap_datadict  );
 
@@ -169,14 +158,18 @@ if(isset($_FILES['uploaded_data_files']))
 
 		datadict_grid.init();
 		datadict_grid.setSkin("dhx_skyblue");
-		
+	
+	
+		add_data_to_grid(datadict_grid, redcap_datadict)	
 /* move below to the function */
-		var parent_id = "";
-		var counter = 0;
-		var txtRow = "";
-	   arr = redcap_datadict.data_as_array;
+	//	var parent_id = "";
+	//	var counter = 0;
+	//	var txtRow = "";
+	//   arr = redcap_datadict.data_as_array;
  
  	/* It would be much more elegant to simply prune the string at the end of the loop */
+
+	/*
 
 	cols_in_datadict = arr[1].length;
 	rows_in_datadict = arr.length;
@@ -185,7 +178,7 @@ if(isset($_FILES['uploaded_data_files']))
 
 	/*please recheck this syntax-- unclear if the counter is doing anything or not.... */
  	
-	      for (row = 1; row < arr.length; row++) {
+	  /*    for (row = 1; row < arr.length; row++) {
 		var txtRow="";
 		
 		
@@ -206,7 +199,7 @@ if(isset($_FILES['uploaded_data_files']))
 			}						
 			//alert ((array[row][1] + counter) + " : " + txtRows + " : " + parent_id);
 		}
-
+	*/
 		datadict_grid.attachHeader("#text_filter,#select_filter,#numeric_filter");
  
  
@@ -235,7 +228,7 @@ if(isset($_FILES['uploaded_data_files']))
 		csvdatafile_grid.init();
 		csvdatafile_grid.setSkin("dhx_skyblue");
 //		add_data_to_grid( csvdatafile_grid, datafile_csv);
-        for (row = 1; row < arr.length; row++) {
+/*        for (row = 1; row < arr.length; row++) {
 		var txtRow = "";
 
 			for (col = 0; col < arr[row].length; col++) {
@@ -254,7 +247,7 @@ if(isset($_FILES['uploaded_data_files']))
 			}						
 			//alert ((array[row][1] + counter) + " : " + txtRows + " : " + parent_id);
 		}
-		
+*/		
 
 	  }
   </script>
@@ -364,7 +357,7 @@ currently we are saving read in input into textboxes which seems a bit odd
 
 
 <!-- style="display: none"-->
-<textarea rows="40" cols="400" id="textbox" style="display"none"></textarea>
+<textarea rows="40" cols="400" id="textbox" style="display:none"></textarea>
 <textarea rows="40" cols="400" id="xmlbox" style="display: none"></textarea>
 <textarea rows="40" cols="400" id="databox" style="display: none"></textarea>
 
