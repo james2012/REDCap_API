@@ -1,0 +1,63 @@
+<html>
+  
+  <head>
+    <title>Patient Look Up</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/bootstrap-responsive.css">
+    <script src="js/jquery.min.js" type="text/javascript" ></script>
+    <script src="js/bootstrap.min.js" type="text/javascript" ></script>
+    <script type="text/javascript" src="js/jquery.qrcode.min.js"></script>
+    <script type="text/javascript" src="js/lookUp.js"></script>
+  </head>
+  
+  <body>
+    <div class="navbar">
+      <div class="navbar-inner">
+        <div class="container">
+          <a class="brand" href="#">Patient Look Up Form</a>
+          <div class="navbar-content">
+            <ul class="nav">
+              <li class="active">
+                <a href="#">Home</a> 
+              </li>
+              <li>
+                <a href="#">About</a> 
+              </li>
+              <li>
+                <a href="#">Contact</a> 
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="container-fluid">
+      <div class="row-fluid">
+        <div class="span3">
+          <ul class="nav  nav-pills nav-stacked"></ul>
+          <div class="well">
+            <p>
+              <b>Enter the name of the patient you wish to look up.</b> 
+            </p>
+          </div>
+        </div>
+        <div class="span9">
+          <div class="hero-unit">
+            <p>
+              <form id="myForm" name="myForm">
+			    First Name: <input type="text" id="firstname" name="firstname" value=""><br>
+			    Last Name: <input type="text" id="lastname" name = "lastname" value=""><br>
+			    <input class="btn" type="button" value="Look Up" id="lookupbtn">
+			  </form>
+            </p>
+          </div>
+        </div>
+      </div>
+      <div id="qrcode" class="well">
+      </div>
+    </div>
+  </body>
+
+</html>

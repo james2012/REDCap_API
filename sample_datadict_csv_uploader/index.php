@@ -102,18 +102,13 @@ if(isset($_FILES['uploaded_data_files']))
 	<script src="codebase/dhtmlx.js"></script>
 	<script src="codebase/csv2array.js"></script>
 	<script src="validate.js"></script>
-<!--	<script src="jquery-1.8.2.min.js"></script>
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
 
-	<script src="jquery.csv-0.71.js"></script>-->
 
 <script src="http://code.jquery.com/jquery-1.8.2.js"></script>
-<link href="http://code.jquery.com/ui/1.9.0/themes/cupertino/jquery-ui.css" rel="stylesheet" />
-<script src="http://code.jquery.com/ui/1.9.0/jquery-ui.js"></script>
-<script></script>
+
 <script src="http://jquery-csv.googlecode.com/git/src/jquery.csv.js"></script>
 	<script src="redletr_helper_functions.js"></script>
-	
+	<script src="temp_functions.js"></script>
 	<style>
 	.upload_box
 		{
@@ -127,7 +122,6 @@ if(isset($_FILES['uploaded_data_files']))
 	//define global variables here
 	var csvdatafile_grid ;
 	var csv_data_grid;
-	
 	var redcap_datadict = new Object();
 	
 	/* This object will contain all of the data and parameters associated with the grid that holds the redcap_datadict object...
@@ -142,15 +136,10 @@ if(isset($_FILES['uploaded_data_files']))
       function get() {
 
       // retrieve data--- first get the data dictionary for the data set
-		datadict_text =  document.getElementById("textbox").value;
-		//datadict_text = datadict_text.substring(1);
-		//	    datadict_text = datadict_text.slice(0,-1);
-	    //alert(datadict_text);
-		//also need to remove trailing "
+	datadict_text =  document.getElementById("textbox").value;
+	
       redcap_datadict.raw_csv_data = document.getElementById("textbox").value;
-	/* so this is an idiosyncracy of the redcap data dict.. for some reason it wraps the entire file in "data" so I need to
-	remove the first " */
-
+	
       // convert data to array
        convert_csvstring_to_object( redcap_datadict  );
 
@@ -167,58 +156,21 @@ if(isset($_FILES['uploaded_data_files']))
 		datadict_grid.setColTypes(redcap_datadict.ColTypes);
 		datadict_grid.setColSorting(redcap_datadict.ColSorting);
 
-		datadict_grid.init();
 		datadict_grid.setSkin("dhx_skyblue");
-		
-/* move below to the function */
-		var parent_id = "";
-		var counter = 0;
-		var txtRow = "";
-	   arr = redcap_datadict.data_as_array;
- 
- 	/* It would be much more elegant to simply prune the string at the end of the loop */
-
-	cols_in_datadict = arr[1].length;
-	rows_in_datadict = arr.length;
+	datadict_grid.init();
 	
- 	//ert( rows_in_datadict+'and cols:'+cols_in_datadict);
-
-	/*please recheck this syntax-- unclear if the counter is doing anything or not.... */
- 	
-	      for (row = 1; row < arr.length; row++) {
-		var txtRow="";
-		
-		
-			for (col = 0; col < arr[row].length; col++) {
-			  if (col == (arr[row].length - 1)) {
-				txtRow += arr[row][col];
-			  }
-			  else {
-				txtRow += arr[row][col] + ",";			  
-			  }
-			}
-
-			try {
-				datadict_grid.addRow((arr[row][0] + counter),txtRow,0,null);
-			}
-			catch (exception) {
-				alert("Error failing in bottom grid: " + exception);
-			}						
-			//alert ((array[row][1] + counter) + " : " + txtRows + " : " + parent_id);
-		}
-
+	
+		add_data_to_grid(datadict_grid, redcap_datadict)	;
 		datadict_grid.attachHeader("#text_filter,#select_filter,#numeric_filter");
- 
- 
+ 	
 	
 	/* Now loading and populating the data for the CSV data */
 	
-      var gd = document.getElementById("tbox").value;
+	  var gd = document.getElementById("tbox").value;
 	  datafile_csv = new Object();
 	  datafile_csv.raw_csv_data = gd;     
-	   convert_csvstring_to_object( datafile_csv  );
+	  convert_csvstring_to_object( datafile_csv  );
      
-        arr = datafile_csv.data_as_array;
 
       
 		csvdatafile_grid = new dhtmlXGridObject('data_gridbox');
@@ -234,27 +186,8 @@ if(isset($_FILES['uploaded_data_files']))
 		
 		csvdatafile_grid.init();
 		csvdatafile_grid.setSkin("dhx_skyblue");
-//		add_data_to_grid( csvdatafile_grid, datafile_csv);
-        for (row = 1; row < arr.length; row++) {
-		var txtRow = "";
+		add_data_to_grid(csvdatafile_grid, datafile_csv)	
 
-			for (col = 0; col < arr[row].length; col++) {
-			  if (col == (arr[row].length - 1)) {
-				txtRow += arr[row][col];
-			  }
-			  else {
-				txtRow += arr[row][col] + ",";			  
-			  }
-			}
-			try {
-				csvdatafile_grid.addRow((arr[row][0] + counter),txtRow,0,null);
-			}
-			catch (exception) {
-				alert("Error: " + exception);
-			}						
-			//alert ((array[row][1] + counter) + " : " + txtRows + " : " + parent_id);
-		}
-		
 
 	  }
   </script>
@@ -295,7 +228,7 @@ if(isset($_FILES['uploaded_data_files']))
 
 <body onload="run_init_code()">
 <div id="header_box" style="border: 1px solid black">
-<h1>Welcome to RED Lettr!! LOGO and help buttons go here</h1>
+<h1><img src="red_envelope.jpg" height=150>Welcome to RED Lettr   <button name="help" value="help">Help</button><button name="about" value="about">About</button></h1>
 
 <div id="button_ctrls">
 	<button id="bobs_button" onClick="bobs_function()"  name="BOB ROCKS">Generate Grid Stats</button>
@@ -307,7 +240,11 @@ if(isset($_FILES['uploaded_data_files']))
 <script >
 function run_init_code()
 	{
-	/* move functions into here */
+	/* move functions into here; can't add filters until the data is actually loaded*/
+	
+		
+ 
+ 
 	}
 
 function bobs_function()
@@ -364,7 +301,7 @@ currently we are saving read in input into textboxes which seems a bit odd
 
 
 <!-- style="display: none"-->
-<textarea rows="40" cols="400" id="textbox" style="display"none"></textarea>
+<textarea rows="40" cols="400" id="textbox" style="display:none"></textarea>
 <textarea rows="40" cols="400" id="xmlbox" style="display: none"></textarea>
 <textarea rows="40" cols="400" id="databox" style="display: none"></textarea>
 

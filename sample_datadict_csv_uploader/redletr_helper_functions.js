@@ -81,23 +81,12 @@ function redcap_datadict_infogen( dhtmlxgrid_object )
 function add_data_to_grid ( dhtmlxgrid_object, csvdata_object)
 	{
 	/* This function will add data contained in the uploaded CSV files to the dhtmlx data grid */
-
 	var arr = csvdata_object.data_as_array;
 	//skip the header
 	  for (row = 1; row < arr.length; row++) {
-        
-        
-/*              for (col = 0; col < arr[row].length; col++) {
-			cur_col = arr[row][col];/* Need to encapsulate current column if it contains commas... *
-			if(cur_col.indexOf(',')=== -1) { txtRow += cur_col +',';}
-			else { txtRow += '"' + cur_col + '",' }	
-*/		
-		
 		  try {   dhtmlxgrid_object.addRow((arr[row][0] + row),arr[row],0,null);         }
 		catch (exception) {   alert("Error: " + exception); 	              }
 	                }
-	                
-                
 	    }
 	
 	

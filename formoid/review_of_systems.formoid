@@ -1,0 +1,1 @@
+{"elements":[{"id":"system_weakness","items":["yes","no"],"name":"system_weakness","hover":"","label":"Weakness","type":"radio"},{"id":"system_malaise","items":["yes","no"],"name":"system_malaise","hover":"","label":"Malaise","type":"radio"},{"id":"system_appetite","items":["yes","no"],"name":"system_appetite","hover":"","label":"Appetite Loss","type":"radio"}]}

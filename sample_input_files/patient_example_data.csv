@@ -1,0 +1,513 @@
+patient_key,name_first,name_last,dob,language,marital_status,race,gender
+0,JANICE,GAY,1967.04.08 00:00:00,Tagalog,Unknown,Other,Female
+1,DENNIS,DIXON,1988.01.19 00:00:00,Chinese-Mandarin,Married,Other,Male
+2,MONICA,REESE,1960.11.02 00:00:00,Czech,Widowed,Black,Female
+3,WAYNE,SIMPSON,1986.10.27 00:00:00,Creole French,Common Law,Middle Eastern,Male
+4,CYNTHIA,LANE,1961.08.01 00:00:00,Cape Verdean Portugese,Divorced,Asian Pacific Islander,Female
+5,DAN,BEASLEY,1952.10.23 00:00:00,Laotian,Unknown,Asian,Male
+6,HELEN,COLEMAN,1967.06.10 00:00:00,Phillipino,Married,Middle Eastern,Female
+7,XAVIER,JACOBS,1977.12.22 00:00:00,Latvian,Unknown,Not Recorded,Male
+8,MADISON,REEVES,1955.02.08 00:00:00,Liberian,Unknown,Asian Pacific Islander,Female
+9,MARION,CLARK,1967.05.26 00:00:00,Tagalog,Widowed,Native American,Male
+10,JAMIE,WRIGHT,1972.03.14 00:00:00,Phillipino,Divorced,Native American,Female
+11,JEREMIAH,WATKINS,1987.02.02 00:00:00,Swahili,Widowed,Native American,Male
+12,MILDRED,JAMES,1960.08.09 00:00:00,Tagalog,Unknown,Asian Pacific Islander,Female
+13,HERMAN,CHAMBERS,1987.05.02 00:00:00,Creole,Separated,Eskimo,Male
+14,JOANNE,BRYAN,1982.11.04 00:00:00,Unknown,Single,Native American,Female
+15,DENNIS,LONG,1961.11.27 00:00:00,Turkish,Partner,Not Recorded,Male
+16,JULIA,WRIGHT,1986.11.14 00:00:00,Cape Verdean,Partner,Aleutian,Female
+17,RALPH,TUCKER,1966.08.18 00:00:00,Haitian French Creole,Partner,Not Recorded,Male
+18,VIRGINIA,BANKS,1956.12.12 00:00:00,Japanese,Single,Not Recorded,Female
+19,DWIGHT,CANTRELL,1970.01.28 00:00:00,Bengali,Unknown,American Indian,Male
+20,MARIE,POOLE,1983.06.24 00:00:00,Spanish,Widowed,Middle Eastern,Female
+21,ARTHUR,BLACK,1977.05.20 00:00:00,Ukranian,Unknown,Black,Male
+22,KRISTEN,BARNETT,1980.09.16 00:00:00,Cape Verdean Creole,Single,Hispanic,Female
+23,CALEB,FOWLER,1954.12.08 00:00:00,Somalian,Widowed,Oriental,Male
+24,DORIS,CRAIG,1981.06.04 00:00:00,Cape Verdean,Common Law,Black,Female
+25,SHAWN,LOVE,1957.09.17 00:00:00,Ethiopian-Tigrinia,Widowed,White,Male
+26,EMILY,HAYES,1969.04.17 00:00:00,Greek,Common Law,Hispanic,Female
+27,NORMAN,WARREN,1958.12.06 00:00:00,Bosnian,Divorced,Not Recorded,Male
+28,MELISSA,LAWRENCE,1955.09.20 00:00:00,Turkish,Widowed,Oriental,Female
+29,JIMMIE,CALDWELL,1963.08.08 00:00:00,Turkish,Married,Aleutian,Male
+30,ELLEN,PRUITT,1960.06.17 00:00:00,Yugoslavian,Widowed,Indian,Female
+31,LUIS,ANDREWS,1962.03.22 00:00:00,Unknown,Unknown,Asian Pacific Islander,Male
+32,NATALIE,MILLS,1982.01.13 00:00:00,Unknown,Single,Other,Female
+33,TYRONE,WILSON,1968.01.21 00:00:00,Chinese-Mandarin,Unknown,Hispanic,Male
+34,JOANN,WELCH,1957.04.17 00:00:00,Unknown,Other,Not Recorded,Female
+35,IAN,BOWEN,1959.12.17 00:00:00,Mute / Illiterate,Other,Multiracial,Male
+36,JOY,FREME,1984.06.23 00:00:00,Dutch,Married,White,Female
+37,DYLAN,DOUGLAS,1980.10.08 00:00:00,Latvian,Common Law,Middle Eastern,Male
+38,WENDY,WRIGHT,1987.09.11 00:00:00,Chinese-Mandarin,Partner,Not Recorded,Female
+39,ALBERT,JOHNSON,1953.03.25 00:00:00,English,Other,Aleutian,Male
+40,BERTHA,POWELL,1971.03.28 00:00:00,Japanese,Common Law,Middle Eastern,Female
+41,ANDREW,GREEN,1978.09.14 00:00:00,Ukranian,Single,Asian,Male
+42,DELORES,HOLT,1968.09.13 00:00:00,Cape Verdean Creole,Widowed,Oriental,Female
+43,MARVIN,JENNINGS,1984.05.25 00:00:00,Italian,Other,Native American,Male
+44,JOY,JAMES,1957.08.09 00:00:00,Swedish,Married,Multiracial,Female
+45,COREY,BLACK,1966.06.21 00:00:00,Lithuanian,Partner,Hispanic,Male
+46,ANNA,RICHARDSON,1970.10.21 00:00:00,Danish,Married,Other,Female
+47,CALVIN,MOODY,1968.01.04 00:00:00,Serbo-Croation,Divorced,Middle Eastern,Male
+48,ANGELA,DEAN,1982.02.01 00:00:00,Shonal Ndebele,Separated,Navajo,Female
+49,SEAN,WOODS,1957.10.25 00:00:00,Tagalog,Married,American Indian,Male
+50,MARGIE,AUSTIN,1970.06.01 00:00:00,Albanian,Widowed,White,Female
+51,DALE,HUNT,1988.09.18 00:00:00,French Creole,Unknown,Other,Male
+52,PEGGY,HORTON,1956.11.12 00:00:00,English,Common Law,Asian Pacific Islander,Female
+53,VERNON,HALL,1985.01.27 00:00:00,Cape Verdean Creole,Divorced,Middle Eastern,Male
+54,THERESA,BUTLER,1981.01.24 00:00:00,Latvian,Single,Asian Pacific Islander,Female
+55,CALEB,GRANT,1970.08.25 00:00:00,Norwegian,Divorced,Other,Male
+56,WILLIE,BAKER,1973.08.24 00:00:00,Latvian,Widowed,Native American,Female
+57,FRED,NASH,1960.01.08 00:00:00,Yiddish,Common Law,Indian,Male
+58,ERIN,HARRIS,1980.02.08 00:00:00,Other,Widowed,Eskimo,Female
+59,LOGAN,GORDON,1967.04.12 00:00:00,Nez Perce,Married,Hispanic,Male
+60,WILLIE,MCDONALD,1958.03.27 00:00:00,American Sign Language,Common Law,American Indian,Female
+61,TODD,INGRAM,1955.09.18 00:00:00,Persian Farci,Partner,Oriental,Male
+62,ANNETTE,CLARK,1958.09.15 00:00:00,Not Recorded,Separated,Asian Pacific Islander,Female
+63,COREY,GOMEZ,1972.08.17 00:00:00,Popo,Common Law,Multiracial,Male
+64,KATIE,REEVES,1973.10.15 00:00:00,Chinese-Mandarin,Divorced,Multiracial,Female
+65,JUSTIN,WALKER,1958.08.04 00:00:00,German,Divorced,Hispanic,Male
+66,KATHLEEN,BENTON,1952.10.12 00:00:00,Thai,Separated,White,Female
+67,HUGH,BURNS,1982.05.25 00:00:00,Tamil,Other,Hispanic,Male
+68,MIRIAM,LITTLE,1970.06.17 00:00:00,French,Unknown,Navajo,Female
+69,JAY,GEORGE,1966.04.04 00:00:00,Nigerian,Widowed,Eskimo,Male
+70,MARIE,KELLY,1968.12.04 00:00:00,Serbo-Croation,Divorced,American Indian,Female
+71,JESSE,KELLEY,1965.10.26 00:00:00,Ukranian,Divorced,Black,Male
+72,LUCILLE,DANIELS,1964.04.08 00:00:00,Persian Farci,Divorced,Indian,Female
+73,RAYMOND,GREEN,1956.07.21 00:00:00,English,Widowed,Other,Male
+74,NORMA,CURRY,1961.10.15 00:00:00,Chinese-Mandarin,Separated,Other,Female
+75,LARRY,SHEPHERD,1969.03.19 00:00:00,Albanian,Married,Black,Male
+76,VIVIAN,DORSEY,1988.03.13 00:00:00,Hungarian,Partner,Not Recorded,Female
+77,GREGORY,RAMSEY,1981.07.01 00:00:00,Polish,Widowed,Oriental,Male
+78,JACQUELINE,HARVEY,1954.01.14 00:00:00,Armenian,Single,Asian,Female
+79,JARED,WELLS,1965.03.15 00:00:00,Taiwanese,Separated,Black,Male
+80,ROSE,SUTTON,1966.10.22 00:00:00,Serbo-Croation,Partner,Asian,Female
+81,TODD,FLETCHER,1983.09.25 00:00:00,Albanian,Separated,Black,Male
+82,JENNIFER,PAGE,1950.02.20 00:00:00,Korean,Married,Black,Female
+83,CURTIS,CARTER,1962.03.21 00:00:00,American Sign Language,Widowed,Eskimo,Male
+84,MONICA,MARSHALL,1953.10.28 00:00:00,Chinese,Widowed,Black,Female
+85,DOUGLAS,RICHARDSON,1962.11.04 00:00:00,Tibetan,Other,Other,Male
+86,ELIZABETH,BURNS,1969.05.22 00:00:00,Arabic,Other,Asian Pacific Islander,Female
+87,LESTER,TERRY,1967.12.03 00:00:00,German,Partner,Asian Pacific Islander,Male
+88,HOLLY,KEMP,1961.11.21 00:00:00,American Sign Language,Married,Asian,Female
+89,WILLIE,HAYES,1967.03.21 00:00:00,Creole French,Separated,Not Recorded,Male
+90,VALERIE,HUFF,1954.06.02 00:00:00,Creole French,Divorced,White,Female
+91,SEAN,KELLEY,1968.05.08 00:00:00,French,Married,Hispanic,Male
+92,JACQUELYN,HUFF,1979.01.11 00:00:00,Chinese-Mandarin,Divorced,Asian,Female
+93,WILLIAM,PAGE,1965.07.06 00:00:00,Danish,Widowed,Asian,Male
+94,RUBY,MADDOX,1953.05.02 00:00:00,Chinese-Toisan,Separated,Other,Female
+95,CECIL,ANDERSON,1949.09.13 00:00:00,Navajo,Partner,Not Recorded,Male
+96,TINA,WALTON,1973.05.19 00:00:00,Russian,Widowed,Eskimo,Female
+97,GORDON,JOHNSON,1973.07.02 00:00:00,Russian,Unknown,Other,Male
+98,KIM,THOMPSON,1971.06.22 00:00:00,Other,Other,Oriental,Female
+99,JEFFREY,WELCH,1974.12.27 00:00:00,Albanian,Unknown,White,Male
+100,LUCY,EDWARDS,1965.08.25 00:00:00,Danish,Divorced,Asian,Female
+101,BRANDON,CAP,1970.07.22 00:00:00,Czech,Common Law,American Indian,Male
+102,MARGIE,BRIDGES,1972.10.18 00:00:00,German,Separated,Multiracial,Female
+103,AARON,DAWSON,1960.12.03 00:00:00,Tagalag,Separated,Aleutian,Male
+104,PATSY,RILEY,1958.03.05 00:00:00,Mute / Illiterate,Widowed,Hispanic,Female
+105,ISAIAH,DEAN,1970.05.05 00:00:00,Sign Language,Widowed,Not Recorded,Male
+106,MARIA,FLEMING,1960.11.17 00:00:00,Islandic,Widowed,Navajo,Female
+107,RICKY,STEWART,1949.07.20 00:00:00,American Sign Language,Other,Navajo,Male
+108,JESSIE,WHITE,1951.01.07 00:00:00,Yugoslavian,Widowed,Native American,Female
+109,JESSE,GREEN,1964.03.11 00:00:00,English,Widowed,White,Male
+110,COURTNEY,HORTON,1971.01.22 00:00:00,Urdu,Unknown,Navajo,Female
+111,CHRISTOPHE,HILL,1985.11.05 00:00:00,Tamil,Common Law,Hispanic,Male
+112,JULIE,LITTLE,1965.10.08 00:00:00,Punjabi,Other,Asian,Female
+113,HUNTER,MURRAY,1972.11.16 00:00:00,Latvian,Other,Eskimo,Male
+114,CATHERINE,BATES,1952.03.19 00:00:00,Romanian,Married,Other,Female
+115,BRIAN,COLLIER,1955.10.25 00:00:00,Yugoslavian,Separated,Aleutian,Male
+116,OLIVIA,ROGERS,1987.10.04 00:00:00,French Canadian,Common Law,Asian,Female
+117,FLOYD,MOODY,1962.08.19 00:00:00,Ukranian,Single,Other,Male
+118,OLIVIA,PEREZ,1966.09.14 00:00:00,Gujarati,Married,Other,Female
+119,ROY,MCDOWELL,1951.10.26 00:00:00,Ethiopian-Tigrinia,Common Law,Black,Male
+120,LISA,ARNOLD,1960.06.16 00:00:00,Swedish,Unknown,Indian,Female
+121,MATTHEW,NEWTON,1988.03.23 00:00:00,Burmese,Single,Multiracial,Male
+122,ELAINE,ROGERS,1952.01.14 00:00:00,Danish,Widowed,Eskimo,Female
+123,NOAH,TUCKER,1952.06.06 00:00:00,French Creole,Separated,Asian Pacific Islander,Male
+124,BESSIE,FIELDS,1988.02.07 00:00:00,Somalian,Married,American Indian,Female
+125,JACOB,KIM,1957.02.24 00:00:00,Tamil,Other,Aleutian,Male
+126,ALEXANDRA,KIM,1966.11.14 00:00:00,Haitian,Common Law,White,Female
+127,ANDREW,ANDREWS,1960.02.25 00:00:00,Cambodian,Other,Hispanic,Male
+128,EDITH,JENKINS,1950.10.05 00:00:00,Armenian,Separated,Middle Eastern,Female
+129,OSCAR,ALLEN,1987.06.25 00:00:00,Cambodian,Widowed,Native American,Male
+130,ROSA,WALKER,1978.10.21 00:00:00,Spanish,Partner,Not Recorded,Female
+131,TODD,MORGAN,1975.07.15 00:00:00,Yugoslavian,Other,White,Male
+132,BARBARA,TATE,1951.10.20 00:00:00,Popo,Separated,Multiracial,Female
+133,TIMOTHY,CLARK,1975.09.24 00:00:00,Gujarati,Other,American Indian,Male
+134,MARY,DAVENPORT,1964.04.19 00:00:00,Czech,Widowed,Asian,Female
+135,PETER,CRAIG,1976.04.03 00:00:00,Danish,Other,Middle Eastern,Male
+136,BRITTANY,PITTS,1953.01.25 00:00:00,Yugoslavian,Widowed,White,Female
+137,JULIUS,HAYNES,1983.09.28 00:00:00,Lithuanian,Common Law,Aleutian,Male
+138,NELLIE,BUTLER,1972.06.19 00:00:00,Latvian,Unknown,Eskimo,Female
+139,PRESTON,ALEXANDER,1958.11.05 00:00:00,Islandic,Single,Indian,Male
+140,ALICIA,JOHNSTON,1963.08.05 00:00:00,Chinese,Widowed,Not Recorded,Female
+141,JULIUS,BURNS,1985.01.05 00:00:00,Shonal Ndebele,Divorced,Navajo,Male
+142,STACEY,POPE,1962.06.27 00:00:00,Romanian,Unknown,Eskimo,Female
+143,SEAN,HAWKINS,1958.03.10 00:00:00,Laotian,Unknown,Eskimo,Male
+144,KATHLEEN,HEAD,1978.07.28 00:00:00,Spanish English,Widowed,Middle Eastern,Female
+145,CODY,CUNNINGHAM,1978.07.15 00:00:00,Chinese-Toisan,Common Law,Oriental,Male
+146,TINA,STEWART,1961.06.24 00:00:00,Burmese,Partner,Native American,Female
+147,WALLACE,MARTIN,1978.07.20 00:00:00,Hungarian,Partner,Oriental,Male
+148,BESSIE,MCDANIEL,1983.03.23 00:00:00,Cape Verdean Creole,Married,Oriental,Female
+149,MARC,COLLIER,1979.06.09 00:00:00,Norwegian,Separated,Navajo,Male
+150,ANNE,GREENE,1987.07.09 00:00:00,Tagalog,Divorced,Navajo,Female
+151,JEFFREY,WARREN,1968.11.09 00:00:00,Czech,Married,Middle Eastern,Male
+152,GRACE,HOPKINS,1981.01.14 00:00:00,Swahili,Widowed,Asian,Female
+153,RONALD,JOHNSTON,1986.10.09 00:00:00,Tagalog,Single,White,Male
+154,OLIVIA,WARD,1960.09.20 00:00:00,Chinese,Common Law,American Indian,Female
+155,XAVIER,HOPKINS,1977.08.17 00:00:00,Chinese,Other,Native American,Male
+156,HEATHER,HUGHES,1972.08.17 00:00:00,Arabic,Married,Multiracial,Female
+157,HUNTER,BUTLER,1969.09.27 00:00:00,KN,Divorced,Middle Eastern,Male
+158,CRYSTAL,HEARD,1988.11.20 00:00:00,Gujarati,Divorced,White,Female
+159,JESSE,LOWE,1978.06.18 00:00:00,Not Recorded,Common Law,White,Male
+160,IRENE,CALHOUN,1969.05.05 00:00:00,Ukranian,Unknown,Eskimo,Female
+161,FRANCIS,SIMPSON,1967.01.02 00:00:00,American Sign Language,Married,Hispanic,Male
+162,MORGAN,ROBERSON,1968.03.04 00:00:00,Swedish,Single,Not Recorded,Female
+163,WESLEY,BARNES,1958.02.22 00:00:00,Italian,Married,Asian,Male
+164,MELINDA,COBB,1959.10.26 00:00:00,Other,Single,Aleutian,Female
+165,ALBERT,GATES,1964.04.07 00:00:00,Somalian,Divorced,Black,Male
+166,JEAN,BROOKS,1985.04.15 00:00:00,Burmese,Common Law,Indian,Female
+167,JOHNNIE,SUTTON,1986.07.02 00:00:00,Polish,Married,Middle Eastern,Male
+168,ALLISON,MCDANIEL,1975.08.03 00:00:00,Popo,Separated,Multiracial,Female
+169,GARY,WELCH,1985.12.23 00:00:00,Native Indian,Married,Oriental,Male
+170,DOROTHY,CURTIS,1959.05.21 00:00:00,Urdu,Other,Hispanic,Female
+171,CLIFFORD,HUNTER,1985.09.11 00:00:00,Persian Farci,Widowed,Oriental,Male
+172,PAULA,PORTER,1981.03.15 00:00:00,Haitian French Creole,Unknown,Middle Eastern,Female
+173,JARED,KNIGHT,1950.04.01 00:00:00,Other,Other,Eskimo,Male
+174,ALICIA,SPENCER,1955.07.09 00:00:00,Bosnian,Married,Native American,Female
+175,JEFFERY,DAVIS,1968.01.06 00:00:00,Creole French,Widowed,Black,Male
+176,BERNICE,RICE,1988.06.23 00:00:00,Cape Verdean Creole,Other,Asian Pacific Islander,Female
+177,CODY,JORDAN,1953.08.07 00:00:00,Ethiopian-Amharic,Common Law,Asian,Male
+178,LESLIE,WHEELER,1978.03.12 00:00:00,Persian Farci,Other,Hispanic,Female
+179,JESSIE,BYRD,1968.04.18 00:00:00,Yugoslavian,Other,Not Recorded,Male
+180,GEORGIA,ALLEN,1973.06.18 00:00:00,Taiwanese,Single,Native American,Female
+181,HENRY,KIM,1986.12.16 00:00:00,Thai,Married,Hispanic,Male
+182,DIANE,FISHER,1960.04.02 00:00:00,Dutch,Divorced,Eskimo,Female
+183,MARION,FISHER,1971.05.12 00:00:00,Liberian,Married,Oriental,Male
+184,JEAN,WELCH,1960.01.16 00:00:00,Popo,Widowed,Black,Female
+185,JESSE,BELL,1962.11.06 00:00:00,Creole French,Unknown,Indian,Male
+186,DIANNE,GARCIA,1975.09.09 00:00:00,Portuguese,Partner,Indian,Female
+187,MARC,PHILLIPS,1975.12.25 00:00:00,Hungarian,Divorced,Oriental,Male
+188,CATHERINE,ELLIOTT,1981.11.28 00:00:00,Swedish,Divorced,Asian,Female
+189,CHRISTOPHER,GATES,1980.09.10 00:00:00,Tamil,Widowed,White,Male
+190,ALLISON,NORMAN,1954.01.06 00:00:00,Tagalog,Common Law,Not Recorded,Female
+191,DENNIS,FRAZIER,1966.10.18 00:00:00,Dutch,Other,Multiracial,Male
+192,ANNETTE,INGRAM,1960.10.02 00:00:00,Liberian,Single,Navajo,Female
+193,HAROLD,HINES,1971.12.09 00:00:00,Cape Verdean Portugese,Separated,Navajo,Male
+194,EVA,WARREN,1963.11.10 00:00:00,Unknown,Common Law,Asian,Female
+195,EARL,BRADLEY,1951.08.19 00:00:00,Ethiopian-Amharic,Other,Not Recorded,Male
+196,GWENDOLYN,WEST,1966.01.21 00:00:00,Punjabi,Unknown,Oriental,Female
+197,NOAH,COOPER,1985.12.18 00:00:00,Ethiopian-Amharic,Married,Hispanic,Male
+198,SHIRLEY,TURNER,1957.12.17 00:00:00,Haitian French Creole,Married,Middle Eastern,Female
+199,WAYNE,BOWEN,1954.08.16 00:00:00,Bulgarian,Single,Oriental,Male
+200,CONNIE,CALDWELL,1986.04.25 00:00:00,Spanish English,Divorced,Not Recorded,Female
+201,JASON,WATSON,1966.02.20 00:00:00,Taiwanese,Married,Oriental,Male
+202,NORMA,WILSON,1964.12.12 00:00:00,Tamil,Common Law,White,Female
+203,THEODORE,HUGHES,1957.05.15 00:00:00,Not Recorded,Separated,Not Recorded,Male
+204,BETTY,DAVENPORT,1953.12.14 00:00:00,Hebrew,Partner,Native American,Female
+205,RYAN,STEVENS,1979.02.02 00:00:00,Bosnian,Widowed,White,Male
+206,PHYLLIS,FISHER,1977.06.17 00:00:00,French Canadian,Divorced,Asian Pacific Islander,Female
+207,LOUIS,MCDANIEL,1962.02.13 00:00:00,Spanish,Widowed,Not Recorded,Male
+208,LYNN,HILL,1962.01.23 00:00:00,Popo,Common Law,Aleutian,Female
+209,HORACE,FLEMING,1965.05.04 00:00:00,Danish,Unknown,Not Recorded,Male
+210,JESSIE,MATHIS,1985.02.24 00:00:00,Danish,Widowed,Not Recorded,Female
+211,JOHN,COCHRAN,1970.07.12 00:00:00,French Canadian,Separated,Aleutian,Male
+212,SHEILA,NORMAN,1982.03.24 00:00:00,Shonal Ndebele,Other,Black,Female
+213,MORRIS,GOMEZ,1975.04.01 00:00:00,Ethiopian-Amharic,Other,Aleutian,Male
+214,ETHEL,SHEPHERD,1964.09.04 00:00:00,French Canadian,Widowed,Indian,Female
+215,DENNIS,WISE,1954.04.16 00:00:00,Sign Language,Single,Asian,Male
+216,DANIELLE,PERRY,1954.12.10 00:00:00,Cambodian,Widowed,Native American,Female
+217,KEVIN,DUNN,1970.10.17 00:00:00,Yiddish,Other,White,Male
+218,VICTORIA,WALTON,1975.01.05 00:00:00,Russian,Unknown,Oriental,Female
+219,LEROY,STEVENS,1988.10.16 00:00:00,Liberian,Widowed,Asian Pacific Islander,Male
+220,SANDRA,COOPER,1949.02.27 00:00:00,Armenian,Partner,American Indian,Female
+221,JONATHAN,STANLEY,1987.09.14 00:00:00,French Creole,Married,Black,Male
+222,AMANDA,BAKER,1968.05.20 00:00:00,Chinese-Cantonese,Single,Not Recorded,Female
+223,JOHNNIE,NELSON,1977.05.18 00:00:00,Serbo-Croation,Separated,Asian Pacific Islander,Male
+224,ANNIE,CLARK,1986.07.27 00:00:00,Tagalag,Common Law,Multiracial,Female
+225,STEVE,ROSS,1982.10.26 00:00:00,Italian,Single,Multiracial,Male
+226,MINNIE,HUDSON,1977.01.02 00:00:00,Navajo,Separated,Hispanic,Female
+227,SAMUEL,ALEXANDER,1974.01.24 00:00:00,Native Indian,Other,Navajo,Male
+228,COURTNEY,LONG,1954.07.17 00:00:00,Haitian,Separated,Asian Pacific Islander,Female
+229,RODERICK,WATSON,1983.06.25 00:00:00,Tamil,Widowed,Not Recorded,Male
+230,JESSICA,STEPHENS,1982.01.06 00:00:00,Islandic,Single,White,Female
+231,GEORGE,REEVES,1981.01.12 00:00:00,English,Married,Other,Male
+232,JESSICA,TATE,1987.06.16 00:00:00,Islandic,Divorced,Aleutian,Female
+233,LLOYD,PATTERSON,1987.10.07 00:00:00,Farsi,Separated,White,Male
+234,COURTNEY,WATKINS,1954.08.26 00:00:00,Eritrean,Separated,Native American,Female
+235,BERNARD,CUNNINGHAM,1956.04.12 00:00:00,Korean,Other,Indian,Male
+236,RUBY,RAMSEY,1984.01.05 00:00:00,Bulgarian,Common Law,Eskimo,Female
+237,REGINALD,GIBSON,1983.05.15 00:00:00,Taiwanese,Single,Eskimo,Male
+238,SHERRY,GIBBS,1973.04.08 00:00:00,Mute / Illiterate,Single,Asian,Female
+239,BRIAN,KELLY,1952.01.20 00:00:00,Spanish,Separated,Asian Pacific Islander,Male
+240,JAMIE,DAVIS,1974.04.21 00:00:00,Haitian French Creole,Other,White,Female
+241,BRENT,HERNANDEZ,1959.10.27 00:00:00,Cape Verdean Portugese,Widowed,Asian,Male
+242,JANE,COCHRAN,1975.05.18 00:00:00,Creole French,Divorced,Aleutian,Female
+243,ANTONIO,CANTRELL,1977.07.26 00:00:00,Gujarati,Partner,Hispanic,Male
+244,CYNTHIA,BATES,1973.05.10 00:00:00,Farsi,Separated,Navajo,Female
+245,MARC,WYATT,1965.01.16 00:00:00,Thai,Widowed,Indian,Male
+246,JOAN,MCDANIEL,1957.10.23 00:00:00,French,Other,Middle Eastern,Female
+247,JARED,RICHARDSON,1981.07.11 00:00:00,Hmong,Partner,Aleutian,Male
+248,NANCY,ELLIS,1966.08.18 00:00:00,Vietnamese,Other,Asian Pacific Islander,Female
+249,STEVEN,SUTTON,1970.01.25 00:00:00,Popo,Unknown,Black,Male
+250,MARIE,SIMS,1976.08.22 00:00:00,Spanish English,Separated,Aleutian,Female
+251,DANNY,MCDANIEL,1965.08.26 00:00:00,Hebrew,Partner,Native American,Male
+252,MICHELLE,MARTIN,1976.09.18 00:00:00,Dutch,Divorced,Eskimo,Female
+253,RALPH,WILLIAMSON,1979.04.25 00:00:00,Sign Language,Divorced,Not Recorded,Male
+254,BESSIE,NEWMAN,1974.07.25 00:00:00,French Creole,Divorced,Black,Female
+255,ROGER,FARMER,1970.10.26 00:00:00,Unknown,Married,American Indian,Male
+256,SALLY,MORRIS,1970.10.27 00:00:00,Tamil,Widowed,American Indian,Female
+257,ALEXANDER,PATRICK,1983.08.08 00:00:00,Islandic,Single,Middle Eastern,Male
+258,PHYLLIS,EDWARDS,1962.11.10 00:00:00,Farsi,Married,Navajo,Female
+259,DALE,SMITH,1964.04.26 00:00:00,Russian,Separated,Eskimo,Male
+260,CAROLINE,JACKSON,1969.01.20 00:00:00,Spanish English,Divorced,Multiracial,Female
+261,CRAIG,LINDSEY,1954.12.12 00:00:00,Greek,Separated,Native American,Male
+262,STACY,FREME,1969.04.21 00:00:00,French Creole,Divorced,Asian Pacific Islander,Female
+263,JEFFREY,BLACK,1949.09.24 00:00:00,Popo,Common Law,Navajo,Male
+264,VICTORIA,CRAIG,1956.02.06 00:00:00,Albanian,Single,Eskimo,Female
+265,LESTER,BARBER,1981.08.10 00:00:00,Polish,Widowed,Asian Pacific Islander,Male
+266,JENNIFER,RUSSELL,1968.10.10 00:00:00,French Canadian,Separated,Asian,Female
+267,JERRY,CARTER,1966.11.21 00:00:00,Ethiopian-Amharic,Common Law,Not Recorded,Male
+268,EVA,TERRELL,1957.04.18 00:00:00,Navajo,Divorced,Navajo,Female
+269,JOSE,BAILEY,1974.09.19 00:00:00,Turkish,Divorced,Not Recorded,Male
+270,BERTHA,MCDANIEL,1971.02.25 00:00:00,Nigerian,Widowed,Eskimo,Female
+271,GENE,RODRIGUEZ,1984.12.13 00:00:00,Hungarian,Divorced,Navajo,Male
+272,CONNIE,BATTLE,1952.09.23 00:00:00,Nez Perce,Widowed,Eskimo,Female
+273,CHAD,MORRIS,1970.01.20 00:00:00,Shonal Ndebele,Partner,Native American,Male
+274,BEATRICE,MILES,1972.03.24 00:00:00,Serbo-Croation,Other,Not Recorded,Female
+275,KEITH,CANTRELL,1975.02.01 00:00:00,Thai,Other,Aleutian,Male
+276,MILDRED,BURNS,1954.04.28 00:00:00,Lithuanian,Divorced,Other,Female
+277,WAYNE,HAYES,1971.06.06 00:00:00,Hindi,Divorced,Hispanic,Male
+278,TANYA,MOSLEY,1959.02.09 00:00:00,Punjabi,Widowed,Not Recorded,Female
+279,LEE,GRIER,1966.07.26 00:00:00,Cape Verdean,Single,Indian,Male
+280,PHYLLIS,COX,1952.03.27 00:00:00,Somalian,Single,Aleutian,Female
+281,LOUIS,FRANKLIN,1983.09.15 00:00:00,Cape Verdean Portugese,Married,Hispanic,Male
+282,ALEXIS,NASH,1951.02.07 00:00:00,Liberian,Widowed,Oriental,Female
+283,KEITH,JACKSON,1974.11.19 00:00:00,Dutch,Other,Native American,Male
+284,DEBORAH,LAWSON,1951.11.14 00:00:00,KN,Common Law,Navajo,Female
+285,WARREN,TATE,1961.04.01 00:00:00,Chinese,Single,Aleutian,Male
+286,KATHLEEN,BARNES,1964.02.25 00:00:00,Albanian,Unknown,Native American,Female
+287,LESTER,CAMP,1969.08.17 00:00:00,Latvian,Single,Middle Eastern,Male
+288,CAROLYN,MADDOX,1969.01.01 00:00:00,Cambodian,Common Law,Not Recorded,Female
+289,DEVIN,MYERS,1966.09.21 00:00:00,Haitian French Creole,Separated,Asian,Male
+290,BRENDA,COX,1953.01.05 00:00:00,French Creole,Widowed,Navajo,Female
+291,SHAWN,HOUSTON,1979.08.03 00:00:00,Haitian,Married,Aleutian,Male
+292,LAUREN,REYNOLDS,1983.05.05 00:00:00,Tagalag,Unknown,Black,Female
+293,KEVIN,HOWARD,1980.10.17 00:00:00,KN,Divorced,Oriental,Male
+294,TAMMY,DAVIS,1957.06.02 00:00:00,Yiddish,Widowed,Other,Female
+295,JOSEPH,MURPHY,1962.12.12 00:00:00,Hebrew,Partner,Navajo,Male
+296,EMILY,BARRETT,1956.04.11 00:00:00,Somalian,Separated,American Indian,Female
+297,FREDDIE,RUSSELL,1970.05.02 00:00:00,Bulgarian,Partner,Other,Male
+298,DONNA,GAY,1965.04.14 00:00:00,Liberian,Married,Black,Female
+299,JEFFREY,WYATT,1985.04.08 00:00:00,Portuguese,Other,Other,Male
+300,EMILY,LOPEZ,1966.07.05 00:00:00,Spanish English,Partner,White,Female
+301,CHRIS,LYONS,1960.09.03 00:00:00,French Creole,Partner,Middle Eastern,Male
+302,CHRISTINE,PEREZ,1956.10.01 00:00:00,Korean,Single,American Indian,Female
+303,ISAAC,CUNNINGHAM,1954.06.27 00:00:00,Nigerian,Unknown,Asian Pacific Islander,Male
+304,CRYSTAL,CAMP,1978.07.24 00:00:00,Eritrean,Single,Not Recorded,Female
+305,JEROME,HEARD,1977.07.27 00:00:00,Yugoslavian,Single,American Indian,Male
+306,MATTIE,FLEMING,1971.06.14 00:00:00,Turkish,Widowed,Eskimo,Female
+307,FLOYD,MYERS,1950.09.22 00:00:00,Czech,Partner,Other,Male
+308,PHYLLIS,PEREZ,1975.11.25 00:00:00,Somalian,Married,Aleutian,Female
+309,JACOB,MANNING,1958.07.20 00:00:00,Czech,Common Law,Middle Eastern,Male
+310,LAURA,PATRICK,1985.12.16 00:00:00,Creole,Unknown,Oriental,Female
+311,PHILIP,WILSON,1982.04.08 00:00:00,Spanish,Partner,Indian,Male
+312,ALICE,RAMSEY,1980.06.07 00:00:00,Chinese-Mandarin,Separated,American Indian,Female
+313,TODD,PETERS,1951.03.22 00:00:00,Cambodian,Common Law,American Indian,Male
+314,JOYCE,BARBER,1974.04.26 00:00:00,Popo,Widowed,American Indian,Female
+315,HAROLD,MCDONALD,1972.11.09 00:00:00,Romanian,Other,Other,Male
+316,SHARON,BRYAN,1984.11.25 00:00:00,Danish,Other,Black,Female
+317,BERNARD,NGUYEN,1972.10.16 00:00:00,Punjabi,Other,Eskimo,Male
+318,ELLA,BUSH,1962.12.17 00:00:00,Czech,Common Law,White,Female
+319,CLIFFORD,JAMES,1987.03.08 00:00:00,Albanian,Common Law,White,Male
+320,PAULINE,HAYNES,1988.12.03 00:00:00,Phillipino,Married,American Indian,Female
+321,EUGENE,PERKINS,1949.04.26 00:00:00,Ukranian,Widowed,Indian,Male
+322,AMBER,MARSHALL,1957.07.23 00:00:00,Creole French,Single,Other,Female
+323,MARC,WEST,1951.09.05 00:00:00,Vietnamese,Unknown,Hispanic,Male
+324,VICKIE,STEVENS,1982.01.11 00:00:00,Other,Other,White,Female
+325,HAROLD,HUFF,1959.07.17 00:00:00,Nigerian,Other,Asian Pacific Islander,Male
+326,RUTH,SMITH,1985.05.08 00:00:00,Tamil,Widowed,Hispanic,Female
+327,HUNTER,HUNTER,1986.01.18 00:00:00,Russian,Separated,Asian Pacific Islander,Male
+328,FELICIA,RODRIGUEZ,1965.09.21 00:00:00,Bosnian,Unknown,Indian,Female
+329,ALFRED,JOHNSON,1976.05.21 00:00:00,Shonal Ndebele,Unknown,Middle Eastern,Male
+330,CAROLYN,CAP,1973.11.01 00:00:00,Bulgarian,Married,Hispanic,Female
+331,RONALD,PATEL,1971.10.23 00:00:00,Hungarian,Married,Asian Pacific Islander,Male
+332,SABRINA,CAMPBELL,1978.11.18 00:00:00,Hebrew,Widowed,Black,Female
+333,DOUGLAS,HAMILTON,1964.08.13 00:00:00,Korean,Separated,Asian Pacific Islander,Male
+334,ALICE,WELCH,1952.12.01 00:00:00,Haitian French Creole,Common Law,Navajo,Female
+335,JACOB,GATES,1982.03.20 00:00:00,Somalian,Married,Native American,Male
+336,CARMEN,REYNOLDS,1966.04.15 00:00:00,Shonal Ndebele,Common Law,Asian Pacific Islander,Female
+337,JULIAN,GILBERT,1976.03.26 00:00:00,Bulgarian,Widowed,Eskimo,Male
+338,DIANE,NEAL,1982.02.08 00:00:00,Cape Verdean Creole,Separated,Eskimo,Female
+339,VERNON,FERGUSON,1983.06.05 00:00:00,Creole French,Separated,Navajo,Male
+340,GAIL,COLE,1958.07.12 00:00:00,Polish,Other,Navajo,Female
+341,JERRY,MCDONALD,1963.09.27 00:00:00,Islandic,Married,Aleutian,Male
+342,MARGARET,GLASS,1978.11.08 00:00:00,Norwegian,Single,Asian Pacific Islander,Female
+343,CAMERON,WOODS,1955.06.21 00:00:00,Other,Other,Oriental,Male
+344,MICHELE,GLOVER,1988.09.18 00:00:00,Native Indian,Unknown,Asian Pacific Islander,Female
+345,JUSTIN,BRYANT,1976.08.25 00:00:00,Cambodian,Partner,Indian,Male
+346,STACEY,BREWER,1988.10.22 00:00:00,Islandic,Partner,Black,Female
+347,DERRICK,JOHNSTON,1968.07.20 00:00:00,Popo,Other,White,Male
+348,LILLIAN,MCDOWELL,1968.09.17 00:00:00,Aborigines,Widowed,White,Female
+349,DONALD,EVANS,1954.08.17 00:00:00,Chinese-Cantonese,Common Law,Not Recorded,Male
+350,JILL,HOLT,1970.05.14 00:00:00,Romanian,Widowed,Navajo,Female
+351,ADRIAN,COCHRAN,1981.08.28 00:00:00,Ethiopian-Amharic,Unknown,Black,Male
+352,JOANN,FERGUSON,1971.12.25 00:00:00,Lithuanian,Unknown,Multiracial,Female
+353,AARON,SANCHEZ,1978.11.24 00:00:00,Norwegian,Other,Middle Eastern,Male
+354,TAMMY,MASON,1976.11.28 00:00:00,Burmese,Unknown,White,Female
+355,BRYAN,CAMPBELL,1982.01.26 00:00:00,Burmese,Partner,Aleutian,Male
+356,SYLVIA,SIMMONS,1982.01.14 00:00:00,Polish,Divorced,Navajo,Female
+357,LONNIE,BURTON,1949.10.25 00:00:00,Cape Verdean Portugese,Common Law,Multiracial,Male
+358,KRISTIN,BURNS,1951.05.07 00:00:00,Islandic,Common Law,Aleutian,Female
+359,ISAAC,CAP,1979.11.03 00:00:00,Cambodian,Divorced,Black,Male
+360,ALEXANDRA,PERRY,1978.04.19 00:00:00,Tagalag,Common Law,Eskimo,Female
+361,JEFFREY,GIBSON,1969.10.10 00:00:00,Tibetan,Partner,American Indian,Male
+362,SUZANNE,LITTLE,1963.11.23 00:00:00,Creole French,Unknown,Not Recorded,Female
+363,LESTER,STEPHENS,1961.04.23 00:00:00,Latvian,Partner,Other,Male
+364,SANDRA,LEWIS,1964.12.23 00:00:00,Phillipino,Partner,Aleutian,Female
+365,BRETT,POOLE,1962.03.11 00:00:00,Danish,Widowed,Not Recorded,Male
+366,ABIGAIL,CUNNINGHAM,1949.06.10 00:00:00,Farsi,Married,Asian,Female
+367,CARLOS,WELCH,1987.10.17 00:00:00,Romanian,Married,Middle Eastern,Male
+368,LORI,WELLS,1949.12.06 00:00:00,Somalian,Other,Black,Female
+369,CHARLES,DAVENPORT,1971.09.15 00:00:00,Other,Common Law,Asian Pacific Islander,Male
+370,HOLLY,HOWARD,1979.12.09 00:00:00,Yugoslavian,Separated,Black,Female
+371,GRADY,LOWE,1981.09.27 00:00:00,Vietnamese,Common Law,Not Recorded,Male
+372,CONSTANCE,STOKES,1988.01.27 00:00:00,Arabic,Unknown,White,Female
+373,ZACHARY,HOWELL,1978.11.05 00:00:00,Dutch,Divorced,Middle Eastern,Male
+374,NORMA,TERRELL,1962.06.07 00:00:00,Turkish,Divorced,American Indian,Female
+375,LUIS,SMITH,1975.11.12 00:00:00,French Creole,Married,White,Male
+376,ESTHER,GEORGE,1970.07.05 00:00:00,Polish,Separated,Native American,Female
+377,TODD,DANIEL,1960.04.10 00:00:00,Filipino,Separated,Navajo,Male
+378,KATIE,PAYNE,1978.10.02 00:00:00,Native Indian,Single,Not Recorded,Female
+379,RONNIE,NGUYEN,1980.11.10 00:00:00,Creole,Divorced,Black,Male
+380,SUZANNE,ELLIOTT,1984.07.11 00:00:00,Albanian,Single,American Indian,Female
+381,LAWRENCE,GREENE,1963.01.24 00:00:00,Chinese-Toisan,Common Law,Multiracial,Male
+382,ANNA,NORRIS,1952.12.26 00:00:00,Chinese-Cantonese,Single,American Indian,Female
+383,COREY,PETERS,1960.04.07 00:00:00,Greek,Widowed,Black,Male
+384,CYNTHIA,TATE,1975.10.04 00:00:00,Taiwanese,Separated,Multiracial,Female
+385,MATTHEW,HAWKINS,1963.06.02 00:00:00,Sign Language,Common Law,Oriental,Male
+386,TARA,DAVENPORT,1949.03.05 00:00:00,Shonal Ndebele,Partner,Other,Female
+387,BRIAN,PARKER,1985.06.21 00:00:00,Gujarati,Married,Hispanic,Male
+388,LAUREN,WISE,1972.01.10 00:00:00,Tagalag,Widowed,Multiracial,Female
+389,DAN,HORTON,1969.06.23 00:00:00,Tagalag,Unknown,Native American,Male
+390,MELANIE,GARRETT,1958.02.13 00:00:00,Cambodian,Partner,Black,Female
+391,MICHAEL,MILLER,1968.08.22 00:00:00,Not Recorded,Common Law,Multiracial,Male
+392,SHIRLEY,ARNOLD,1960.03.18 00:00:00,Bosnian,Separated,Multiracial,Female
+393,PATRICK,CURTIS,1966.05.21 00:00:00,Bosnian,Separated,Navajo,Male
+394,MATTIE,KELLEY,1981.09.05 00:00:00,Greek,Separated,White,Female
+395,EDWARD,WATSON,1984.05.19 00:00:00,Czech,Other,Asian Pacific Islander,Male
+396,GERALDINE,WALTERS,1987.02.20 00:00:00,Chinese-Toisan,Divorced,Other,Female
+397,AUSTIN,BREWER,1955.03.17 00:00:00,Italian,Common Law,Multiracial,Male
+398,KAYLA,FRAZIER,1970.09.14 00:00:00,Popo,Divorced,Not Recorded,Female
+399,BRIAN,HAYNES,1973.02.04 00:00:00,Bulgarian,Widowed,Navajo,Male
+400,WENDY,HUNT,1979.12.11 00:00:00,Polish,Unknown,Other,Female
+401,HOWARD,NELSON,1951.01.10 00:00:00,Polish,Common Law,American Indian,Male
+402,JOHNNIE,WILLIS,1979.04.26 00:00:00,Taiwanese,Unknown,Native American,Female
+403,MARSHALL,MYERS,1968.03.03 00:00:00,French Creole,Married,Navajo,Male
+404,ELLEN,PETERSON,1986.11.08 00:00:00,Haitian,Unknown,Eskimo,Female
+405,STEVE,MILLER,1951.05.01 00:00:00,French Canadian,Separated,Multiracial,Male
+406,SHANNON,DENNIS,1951.04.17 00:00:00,Haitian French Creole,Unknown,Asian Pacific Islander,Female
+407,JORDAN,HUNTER,1985.03.09 00:00:00,Taiwanese,Married,Eskimo,Male
+408,LUCILLE,BEASLEY,1953.02.16 00:00:00,Bengali,Other,Middle Eastern,Female
+409,PATRICK,DAVIS,1952.04.05 00:00:00,Bulgarian,Widowed,Oriental,Male
+410,KAREN,TERRELL,1950.02.04 00:00:00,Latvian,Widowed,Asian,Female
+411,JORGE,STRICKLAND,1953.03.19 00:00:00,Not Recorded,Unknown,Aleutian,Male
+412,CINDY,NORMAN,1961.06.22 00:00:00,Taiwanese,Divorced,Not Recorded,Female
+413,CLYDE,WOOD,1956.06.07 00:00:00,Spanish English,Partner,Asian Pacific Islander,Male
+414,DAWN,WELLS,1968.01.11 00:00:00,Eritrean,Common Law,Eskimo,Female
+415,GARY,BENNETT,1987.12.01 00:00:00,Tagalog,Other,Other,Male
+416,GERALDINE,SIMMONS,1949.06.17 00:00:00,Hungarian,Married,Navajo,Female
+417,ALEX,POPE,1963.09.12 00:00:00,Arabic,Widowed,American Indian,Male
+418,REGINA,MOON,1976.08.26 00:00:00,Cape Verdean Portugese,Married,Not Recorded,Female
+419,FREDDIE,LOPEZ,1952.05.19 00:00:00,Arabic,Single,Middle Eastern,Male
+420,KATIE,WARREN,1950.10.08 00:00:00,Other,Married,Hispanic,Female
+421,JESSE,WILLIAMSON,1949.05.20 00:00:00,Ethiopian-Amharic,Divorced,Other,Male
+422,JESSIE,ARMSTRONG,1976.06.12 00:00:00,Latvian,Married,Middle Eastern,Female
+423,DON,CARTER,1978.06.26 00:00:00,Popo,Single,Multiracial,Male
+424,RENEE,MASSEY,1974.09.09 00:00:00,Ethiopian-Amharic,Single,Eskimo,Female
+425,EDWARD,MORRIS,1976.04.14 00:00:00,Korean,Partner,Eskimo,Male
+426,LUCY,GONZALEZ,1967.03.03 00:00:00,Latvian,Widowed,Oriental,Female
+427,TYLER,HARVEY,1958.05.19 00:00:00,Filipino,Widowed,Eskimo,Male
+428,GLORIA,WEST,1960.01.10 00:00:00,Bosnian,Partner,Black,Female
+429,NORMAN,WATKINS,1957.01.15 00:00:00,Aborigines,Separated,Multiracial,Male
+430,ANNA,GATES,1951.10.12 00:00:00,Bulgarian,Divorced,Asian Pacific Islander,Female
+431,LEROY,DANIELS,1963.03.27 00:00:00,Taiwanese,Other,Other,Male
+432,SHANNON,GLOVER,1974.10.12 00:00:00,Haitian French Creole,Separated,Indian,Female
+433,MILTON,PAYNE,1956.11.19 00:00:00,Swahili,Single,Eskimo,Male
+434,SALLY,NEAL,1974.04.06 00:00:00,Native Indian,Divorced,Asian,Female
+435,BEN,BROWN,1987.09.09 00:00:00,Bosnian,Unknown,Navajo,Male
+436,KATHLEEN,WADE,1978.08.17 00:00:00,Shonal Ndebele,Common Law,American Indian,Female
+437,DERRICK,HARVEY,1969.04.17 00:00:00,Turkish,Single,Indian,Male
+438,HANNAH,HOWELL,1961.06.12 00:00:00,Persian Farci,Unknown,Not Recorded,Female
+439,MELVIN,GEORGE,1965.02.19 00:00:00,Other,Separated,Aleutian,Male
+440,CARMEN,PATRICK,1953.02.13 00:00:00,Haitian,Divorced,Aleutian,Female
+441,JOHNNY,WATTS,1983.06.17 00:00:00,Norwegian,Separated,Native American,Male
+442,DEBORAH,COBB,1953.04.25 00:00:00,Haitian French Creole,Single,Multiracial,Female
+443,CODY,STANLEY,1965.03.19 00:00:00,Hungarian,Separated,Native American,Male
+444,DELORES,HARRIS,1963.04.23 00:00:00,Punjabi,Separated,American Indian,Female
+445,JASON,CRAIG,1965.10.08 00:00:00,Bulgarian,Unknown,Asian,Male
+446,MARION,MILLS,1952.01.19 00:00:00,Latvian,Other,White,Female
+447,LARRY,FREME,1975.12.13 00:00:00,Cape Verdean Portugese,Other,Not Recorded,Male
+448,MARCIA,MURRAY,1973.10.07 00:00:00,Arabic,Married,Not Recorded,Female
+449,CARLTON,DORSEY,1982.03.21 00:00:00,Chinese,Married,Hispanic,Male
+450,PAMELA,KELLY,1960.11.28 00:00:00,Bosnian,Widowed,Indian,Female
+451,JUSTIN,FLETCHER,1956.02.17 00:00:00,Albanian,Widowed,Native American,Male
+452,ELIZABETH,ALLEN,1975.07.22 00:00:00,Ethiopian-Tigrinia,Married,Not Recorded,Female
+453,JEREMY,RICHARDSON,1966.01.26 00:00:00,Nez Perce,Divorced,Hispanic,Male
+454,LILLIAN,BREWER,1975.08.22 00:00:00,Hebrew,Divorced,Eskimo,Female
+455,BERNARD,LINDSEY,1970.07.01 00:00:00,Turkish,Unknown,Middle Eastern,Male
+456,MARILYN,CALHOUN,1972.05.18 00:00:00,Popo,Widowed,White,Female
+457,WESLEY,FRANKLIN,1970.08.08 00:00:00,Japanese,Married,Not Recorded,Male
+458,YOLANDA,STONE,1972.12.04 00:00:00,Polish,Divorced,Native American,Female
+459,KENNETH,LEE,1951.04.21 00:00:00,Unknown,Unknown,Other,Male
+460,PAULINE,ROBINSON,1984.12.01 00:00:00,Native Indian,Partner,Native American,Female
+461,CURTIS,POOLE,1954.07.06 00:00:00,Serbo-Croation,Single,Indian,Male
+462,EVELYN,RICHARDS,1950.05.21 00:00:00,Urdu,Divorced,Native American,Female
+463,TROY,ALEXANDER,1981.05.11 00:00:00,Tibetan,Divorced,Not Recorded,Male
+464,WANDA,HOOD,1960.08.27 00:00:00,Burmese,Divorced,Indian,Female
+465,WALTER,SCOTT,1964.09.25 00:00:00,Creole French,Divorced,Oriental,Male
+466,TAMARA,FOX,1971.04.19 00:00:00,Mute / Illiterate,Other,Indian,Female
+467,ALEXANDER,NEWTON,1984.03.26 00:00:00,Cape Verdean,Common Law,Middle Eastern,Male
+468,ERICA,COOPER,1977.02.01 00:00:00,Popo,Unknown,Oriental,Female
+469,TYLER,MORRISON,1957.06.13 00:00:00,Mute / Illiterate,Unknown,Asian Pacific Islander,Male
+470,WENDY,LAWSON,1971.06.19 00:00:00,American Sign Language,Divorced,Multiracial,Female
+471,LLOYD,COBB,1951.12.24 00:00:00,French,Other,Asian Pacific Islander,Male
+472,EDNA,HUBBARD,1975.08.01 00:00:00,Latvian,Widowed,Middle Eastern,Female
+473,FREDERICK,EVANS,1982.06.05 00:00:00,Spanish,Other,Asian,Male
+474,RHONDA,MANNING,1986.01.15 00:00:00,Bengali,Partner,Aleutian,Female
+475,JAMES,WALTERS,1983.06.05 00:00:00,Cape Verdean,Common Law,Asian Pacific Islander,Male
+476,KATHRYN,SPENCER,1957.10.11 00:00:00,Persian Farci,Married,Asian Pacific Islander,Female
+477,CARLOS,ADJUDICATION,1966.10.16 00:00:00,Thai,Widowed,Middle Eastern,Male
+478,SANDRA,CAMP,1949.07.02 00:00:00,Sign Language,Separated,White,Female
+479,VINCENT,BRYAN,1967.07.01 00:00:00,Farsi,Other,Not Recorded,Male
+480,PATRICIA,MCDANIEL,1982.07.22 00:00:00,Creole,Divorced,Black,Female
+481,JUAN,BENNETT,1977.10.23 00:00:00,Japanese,Divorced,Asian Pacific Islander,Male
+482,JULIA,MASON,1952.01.16 00:00:00,Creole,Married,Indian,Female
+483,STEVE,REID,1957.05.12 00:00:00,Punjabi,Widowed,Other,Male
+484,ALLISON,DAVIS,1953.11.21 00:00:00,Romanian,Other,Native American,Female
+485,MAURICE,SHAW,1957.02.19 00:00:00,Creole French,Divorced,Oriental,Male
+486,GLENDA,ROBERSON,1977.06.04 00:00:00,Portuguese,Married,Asian,Female
+487,HUNTER,WOODS,1968.10.01 00:00:00,German,Partner,Navajo,Male
+488,BESSIE,NEAL,1967.01.19 00:00:00,Vietnamese,Unknown,Other,Female
+489,JOSHUA,GREEN,1962.05.20 00:00:00,Cape Verdean,Other,White,Male
+490,CAROLINE,GARNER,1961.10.17 00:00:00,Liberian,Other,Asian,Female
+491,BOBBY,MYERS,1971.02.17 00:00:00,Hindi,Widowed,Middle Eastern,Male
+492,MARION,MCCOY,1966.10.06 00:00:00,Laotian,Divorced,Asian,Female
+493,CHAD,SHEPHERD,1980.11.21 00:00:00,Spanish,Common Law,Asian,Male
+494,DENISE,RICHARDS,1972.11.02 00:00:00,Ethiopian-Amharic,Partner,White,Female
+495,LOGAN,GONZALEZ,1973.06.01 00:00:00,Shonal Ndebele,Divorced,Not Recorded,Male
+496,ALLISON,BISHOP,1977.03.20 00:00:00,Tamil,Married,Asian Pacific Islander,Female
+497,RAY,FOX,1965.04.21 00:00:00,Thai,Partner,Not Recorded,Male
+498,CRYSTAL,PORTER,1956.07.07 00:00:00,American Sign Language,Widowed,Multiracial,Female
+499,LEE,GOMEZ,1961.09.18 00:00:00,German,Widowed,Native American,Male
+500,PATSY,FOSTER,1981.04.05 00:00:00,Persian Farci,Separated,Multiracial,Female
+501,RICKY,HARDY,1976.11.28 00:00:00,Farsi,Other,American Indian,Male
+502,HANNAH,CHANDLER,1956.03.21 00:00:00,American Sign Language,Other,Not Recorded,Female
+503,RAYMOND,REYNOLDS,1969.03.14 00:00:00,Japanese,Widowed,Native American,Male
+504,CARRIE,DAVIS,1975.04.24 00:00:00,Haitian French Creole,Common Law,Other,Female
+505,XAVIER,HARRIS,1974.08.10 00:00:00,Bengali,Common Law,Black,Male
+506,MARGIE,CARROLL,1986.01.12 00:00:00,Danish,Widowed,Asian,Female
+507,SHAWN,FISHER,1985.09.20 00:00:00,Ukranian,Single,Eskimo,Male
+508,STACEY,GLOVER,1977.09.15 00:00:00,Urdu,Widowed,White,Female
+509,ALEX,ROBERSON,1974.09.14 00:00:00,Punjabi,Widowed,Aleutian,Male
+510,JANE,HALL,1975.10.08 00:00:00,Ethiopian-Tigrinia,Common Law,American Indian,Female
+511,DANNY,HAYES,1956.05.25 00:00:00,Mute / Illiterate,Partner,Hispanic,Male

@@ -1,0 +1,49 @@
+# Load needed libraries
+# --> NOTE: RCurl is dependent on bitops
+library(bitops)
+library(RCurl)
+library(Hmisc)
+library(xtable)
+
+# Set secret token specific to your REDCap project
+secret_token = 'YOUR_API_TOKEN'
+
+# Set the url to the api (ex. https://YOUR_REDCAP_INSTALLATION/api/)
+api_url = 'YOUR_API_URL'
+
+## If in R for Windows
+## --> NOTE: need to do this because the Curl C libraries are not "default programs" used (unlike on a Mac)
+curl_handle = getCurlHandle()
+curlSetOpt(ssl.verifypeer = FALSE, curl = curl_handle)
+## Read all data from REDCap
+y <- postForm(api_url,
+   token = secret_token,
+   content = 'record',
+   format = 'csv', 
+   type = 'flat',
+   curl = curl_handle)
+
+## If in R for Linux
+## --> NOTE: need to additionally install the Curl C libraries --- not installed on default (like on a Mac)
+## --> NOTE: To install RCurl on a Linux machine
+## From terminal command line:
+# sudo apt-get install libcurl4-openssl-dev
+## Then
+# sudo R
+## Then from within R
+# install.packages("RCurl")
+# --> Code to "export" data from REDCap
+#y <- postForm(api_url,
+#   token = secret_token,
+#   content = 'record',
+#   format = 'csv', 
+#   type = 'flat')
+
+# Use the output from postForm() to create a data frame of the exported data
+x <- read.table(file = textConnection(y), header = TRUE, sep = ",", na.strings = "",
+   stringsAsFactors = FALSE)
+rm(secret_token, y)
+
+## Alternative code:
+#write(y, file = "data_file.csv"); 
+#x <- read.table("data_file.csv", sep = ",", header = TRUE, na.strings = "")

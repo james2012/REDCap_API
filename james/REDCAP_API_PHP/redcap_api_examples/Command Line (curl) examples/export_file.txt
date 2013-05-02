@@ -1,0 +1,10 @@
+### Uses curl. Please make sure you have the module
+
+# Set secret token specific to your REDCap project
+TOKEN="YOUR_TOKEN"
+
+# Set the url to the api (ex. https://YOUR_REDCAP_INSTALLATION/api/)
+SERVICE="YOUR_API_URL"
+
+#DOWNLOAD  a file from REDCAP from field MYFILE and record MYRECORDNUM
+curl -F token=${TOKEN}  -F content=file -F action=export -F record=MYRECORDNUM -F field=MYFILE  ${SERVICE}

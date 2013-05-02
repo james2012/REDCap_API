@@ -1,0 +1,17 @@
+### Uses curl. Please make sure you have the module
+
+# Set secret token specific to your REDCap project
+TOKEN="YOUR_TOKEN"
+
+# Set the url to the api (ex. https://YOUR_REDCAP_INSTALLATION/api/)
+SERVICE="YOUR_API_URL"
+
+# UPLOAD a flat csv record contain in file file (/path/to/my.csv) 
+# Note the use of '<' to get curl to read in data from external file
+curl    --form token=${TOKEN} \
+        --form overwriteBehavior=normal \
+        --form content=record  
+        --form format=csv 
+        --form type=flat \
+        --form data="</path/to/my.csv" \
+        ${SERVICE}
